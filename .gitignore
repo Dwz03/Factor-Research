@@ -1,8 +1,24 @@
-.venv/
-__pycache__/
-.pytest_cache/
-.ipynb_checkpoints/
-data/*
-!data/.gitkeep
+# Local settings and environments
 .env
 .env.*
+.venv/
+
+# Generated Python and tooling files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local datasets, including legacy notebook-relative caches
+/data/*
+!/data/.gitkeep
+/research/**/data/
+
+# Build artifacts
+*.egg-info/
+build/
+dist/

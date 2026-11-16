@@ -1,0 +1,12 @@
+{
+  "protocol_id": "momentum_001_validation_v1.0.0",
+  "sealed_on": "2026-11-13",
+  "timezone": "Asia/Shanghai",
+  "algorithm": "SHA256",
+  "sha256": {
+    "config/momentum_001_validation.json": "3dac4c7dc3f9b105da885d065f4f3b66471443ad4e4013b10911886d30ed6797",
+    "reports/01_momentum_validation_protocol.md": "867e3e7e4642906e3c32be98800437ea9c4f5b8b8d1c6ce7eaa1a94a59ff69a4",
+    "reports/01_momentum_exploration_summary.md": "2cdcf4b0b63eae513dc1fd314ea1f3feada36451b9e1887a7bbff1b890a05a45"
+  },
+  "scope": "local integrity seal; not an independently timestamped registration"
+}

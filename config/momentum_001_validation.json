@@ -1,0 +1,517 @@
+{
+  "schema_version": 1,
+  "protocol_id": "momentum_001_validation_v1.0.0",
+  "status": "frozen_not_executed",
+  "frozen_on": "2026-11-13",
+  "timezone": "Asia/Shanghai",
+  "selection_provenance": {
+    "hypothesis_selected_after_exploration": true,
+    "independently_prespecified_before_exploration": false,
+    "basis": "Completed 2010-2016 window, HAC and quantile exploration; no validation outcomes inspected"
+  },
+  "periods": {
+    "exploration": {
+      "start": "2010-01-01",
+      "end_inclusive": "2016-12-31"
+    },
+    "validation": {
+      "start": "2017-01-01",
+      "end_inclusive": "2019-12-31"
+    },
+    "held_out": {
+      "start": "2020-01-01",
+      "end_inclusive": "2025-12-31",
+      "access_authorized": false
+    }
+  },
+  "universe": {
+    "path": "config/universe.csv",
+    "size": 300,
+    "sha256": "5338edef404adedcea8aa8ea6d22a535da762398e5391b3ceee35b7695739fb7",
+    "replace_or_drop_symbols": false,
+    "historical_membership": false,
+    "survivorship_selection_bias": true
+  },
+  "data": {
+    "path": "data/market/2026-11-12/prices.csv",
+    "sha256": "7f675245b5cc7bcfde41f8bbf6ad6b005c3b96a53656453eee1017533237b8cc",
+    "source": "yahoo",
+    "field": "Close",
+    "auto_adjust": true,
+    "refresh_allowed": false,
+    "integrity_hash_only_during_freeze": true
+  },
+  "factor": {
+    "function": "factors.momentum.calculate_momentum",
+    "window": 5,
+    "formula": "P[t]/P[t-5]-1",
+    "fill_method": null,
+    "sector_neutralization": false,
+    "regime_filter": false
+  },
+  "timing": {
+    "signal_availability": "after signal-date close",
+    "horizon_rows": 5,
+    "entry_lag_rows": 1,
+    "target_formula": "P[t+6]/P[t+1]-1",
+    "forward_function": "src.evaluation.forward_returns",
+    "warmup": {
+      "preceding_rows": 5,
+      "selection": "last five observed trading rows before 2017-01-01 from frozen price panel",
+      "factor_prices_only": true,
+      "include_warmup_outcomes": false
+    },
+    "max_input_date": "2019-12-31",
+    "endpoint_dates_must_be_within_validation": true,
+    "label_construction": "warmup plus validation bounded panel; restrict signal dates to validation after factors",
+    "calendar": "frozen observed trading-date grid; no invented or dropped rows before shifts"
+  },
+  "missing_data": {
+    "forward_fill": false,
+    "interpolate": false,
+    "invalid_observed_prices": "abort",
+    "missing_factor_or_label_endpoint": "exclude affected ticker pair; retain universe column",
+    "require_observed_intermediate_prices": false,
+    "document_all_exclusions": true
+  },
+  "primary": {
+    "outcome": "mean daily Spearman Rank IC",
+    "function": "src.evaluation.rank_ic",
+    "min_assets": 100,
+    "asset_alignment": "same signal date and ticker labels",
+    "ties": "average ranks in paired sample",
+    "date_weighting": "equal across valid signal dates",
+    "multi_window_common_sample_required": false,
+    "undefined_cross_section": "NaN for insufficient pairs or zero variance",
+    "hypothesis": {
+      "null": "mean Rank IC >= 0",
+      "alternative": "mean Rank IC < 0"
+    },
+    "inference": {
+      "method": "Newey-West HAC",
+      "lag": 5,
+      "kernel": "Bartlett",
+      "weights": "1-j/(L+1)",
+      "covariance_correction": true,
+      "correction_factor": "n/(n-1)",
+      "residual_demeaning": true,
+      "autocovariance_denominator": "n",
+      "reference_distribution": "standard_normal_asymptotic",
+      "statistic": "mean / HAC_SE",
+      "tail": "lower",
+      "p_value_formula": "scipy.stats.norm.cdf(t_stat)",
+      "alpha": 0.05,
+      "one_sided_upper_bound_95": "mean + scipy.stats.norm.ppf(0.95)*HAC_SE",
+      "existing_covariance_function": "src.evaluation.hac_mean",
+      "existing_two_sided_p_is_not_primary": true,
+      "minimum_n_exclusive": 5,
+      "positive_finite_se_required": true,
+      "boundary_undefined_rows": "trim leading/trailing only and record",
+      "interior_undefined_ic": "inconclusive; do not compress or impute",
+      "sensitivity_lags": []
+    }
+  },
+  "secondary": {
+    "outcome": "mean daily Q1 minus Q5 forward-return spread",
+    "role": "descriptive_only",
+    "quantiles": 5,
+    "grouping_function": "src.evaluation.quantile_groups",
+    "returns_function": "src.evaluation.quantile_returns",
+    "membership": "factor-only before excluding missing forward labels",
+    "bin_formula": "floor((average_rank-0.5)/observed_factor_count*5)+1",
+    "Q1": "lowest 5D Momentum",
+    "Q5": "highest 5D Momentum",
+    "ties": "kept together",
+    "minimum_observed_factors": 5,
+    "constant_factor_cross_section": "unassigned",
+    "minimum_valid_returns_per_group": 1,
+    "empty_group_mean": null,
+    "within_group_weights": "equal over observed future returns of preassigned members",
+    "date_weights": "equal over dates with both Q1 and Q5 means",
+    "apply_primary_100_asset_filter": false,
+    "require_primary_ic_valid_dates": false,
+    "p_value_or_success_test": false,
+    "can_override_primary_decision": false,
+    "outputs": [
+      "mean_spread",
+      "sample_std_ddof_1",
+      "positive_fraction",
+      "valid_dates",
+      "members_and_valid_return_counts"
+    ]
+  },
+  "decision": {
+    "gate": "verify protocol seal, frozen inputs/implementations, package versions and data/inference eligibility",
+    "pass": "mean < 0 AND lower-tail p < 0.05; single fixed primary test",
+    "no_pass": "eligible but pass condition false; not evidence of zero effect",
+    "inconclusive": "any integrity, structural, internal-gap, n<=5, nonfinite or zero-HAC-SE failure",
+    "equal_to_alpha": "does not pass",
+    "secondary_cannot_rescue": true,
+    "optional_stopping": false,
+    "outcome_driven_amendments": false,
+    "held_out_execution_authorized_by_pass": false,
+    "required_report": [
+      "mean",
+      "n",
+      "HAC_SE",
+      "t_stat",
+      "one_sided_p",
+      "one_sided_upper_95",
+      "coverage",
+      "all_exclusions"
+    ]
+  },
+  "implementation": {
+    "version": "momentum_001_validation_v1.0.0",
+    "git_head": "71416d0a2c31c0d7bd5d95ec85674e3274ea7b14",
+    "working_tree_clean": false,
+    "git_head_alone_is_version": false,
+    "source_manifest_sha256": "9ac6115ef54bdc05b4f1d9e8d698216445989954347ccca78c37c454136cf188",
+    "snapshot_directory": "data/protocols/momentum_001_validation_v1",
+    "validation_driver_created": false,
+    "later_driver_must_follow_frozen_contract_and_record_own_hash": true
+  },
+  "environment": {
+    "python": "3.12.4",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scipy": "1.18.1",
+    "statsmodels": "0.15.0",
+    "yfinance": "1.8.0",
+    "python-dotenv": "1.2.4",
+    "pytest": "9.2.0",
+    "matplotlib": "3.11.2",
+    "patsy": "1.0.3",
+    "formulaic": "1.2.2"
+  },
+  "frozen_files": {
+    "src/__init__.py": {
+      "sha256": "d2757a6944bd41ddaf4d3c8763a910363bb30a04cf4b8fd83d89477599980842",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/src/__init__.py"
+    },
+    "src/data/__init__.py": {
+      "sha256": "898f0cc0bc56337dee18a61911b72ab6367582a6820b168708a725b73ade3d12",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/src/data/__init__.py"
+    },
+    "src/data/cleaner.py": {
+      "sha256": "70ea6dc326a7f29b9ba26cbe5e5a85ed441c9063402df282ad9dd31d7e8ca740",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/src/data/cleaner.py"
+    },
+    "src/data/loader.py": {
+      "sha256": "00a671eae50f03db21f68cf023dd39e338c02aacacb7356e96ab0585937cc6bc",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/src/data/loader.py"
+    },
+    "src/data/validation.py": {
+      "sha256": "878ac0e76c2518506bc8df7bcebc6fcd142fb358e8d468660664c3375a3aa190",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/src/data/validation.py"
+    },
+    "src/evaluation/__init__.py": {
+      "sha256": "368cef080c7428f0224ffc740affd287d74377acbd26e60a76167f1e82015b6d",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/src/evaluation/__init__.py"
+    },
+    "src/evaluation/core.py": {
+      "sha256": "cd9582456b00a8da5e7464245197ef89fe285f1dea35025e9c36cb207e3fab87",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/src/evaluation/core.py"
+    },
+    "src/evaluation/inference.py": {
+      "sha256": "2d95184d7f8c418954109d625858b9aef718f57f41ed514c2508df2e66224508",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/src/evaluation/inference.py"
+    },
+    "src/evaluation/regimes.py": {
+      "sha256": "e1c5a8fd6e6b8dc4411a856cebc1c37d78fb0fc0618a3fef63693cfcb952b115",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/src/evaluation/regimes.py"
+    },
+    "factors/momentum.py": {
+      "sha256": "c8bcb4deed73c8f78c0d534d0236fae208c1053956962c55cb498d3540969690",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/factors/momentum.py"
+    },
+    "scripts/build_market_dataset.py": {
+      "sha256": "a3b67211fcc3536af6e50415a9e509c63e459954798cfc30360aaffe77fc8daf",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/scripts/build_market_dataset.py"
+    },
+    "scripts/momentum_hac_001.py": {
+      "sha256": "fabe8f0af082a029797e181cbcdae5c481de543e474cb0f1bc4420a6d212b7e7",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/scripts/momentum_hac_001.py"
+    },
+    "scripts/momentum_quantiles_001.py": {
+      "sha256": "4845e52d7a020edc227bc20baeb70de2b35baf1ec26505c881488034709c11be",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/scripts/momentum_quantiles_001.py"
+    },
+    "scripts/momentum_regime_001.py": {
+      "sha256": "2b0ba06a39d7b096df185624a4a73a32be728e8f6a446b76a2139235b458ec59",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/scripts/momentum_regime_001.py"
+    },
+    "scripts/momentum_window_sensitivity_001.py": {
+      "sha256": "310d4ef229a99aa94b0ac7555f74cab9b5b7119f7ac580ef2afd17c7c8c3702b",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/scripts/momentum_window_sensitivity_001.py"
+    },
+    "scripts/verify_momentum_001_validation.py": {
+      "sha256": "1bfab6138ad2f8edb18e2d228007aa0da9e06f1ef829382270e647e180669be4",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/scripts/verify_momentum_001_validation.py"
+    },
+    "tests/conftest.py": {
+      "sha256": "97938ff8b877dad66c18304fd1e32983ddc5126e5128c5b43a90c6d5c55f7c03",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/tests/conftest.py"
+    },
+    "tests/test_data_cleaner.py": {
+      "sha256": "9dbb1a94a9cb2e16921042b234aafd461e93913446ed432722efb19558fd06c2",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/tests/test_data_cleaner.py"
+    },
+    "tests/test_data_loader.py": {
+      "sha256": "170f5397fc644b5ef419698e67c9dbc80ea067e1cd6746a080a8618da8bf0f71",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/tests/test_data_loader.py"
+    },
+    "tests/test_evaluation.py": {
+      "sha256": "d64e7af30933628a99eb85eafd87b2be0f652af7c4f64910abf9d768a4e80692",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/tests/test_evaluation.py"
+    },
+    "tests/test_inference.py": {
+      "sha256": "ee07c92571853053a8b338381957d1c65c2d010b9b1c6f1df0cc9b1db662427e",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/tests/test_inference.py"
+    },
+    "tests/test_market_dataset.py": {
+      "sha256": "4f6341b0c0d4caae8a85493b804ba83a501395241fe2c46a7444989585d58803",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/tests/test_market_dataset.py"
+    },
+    "tests/test_momentum.py": {
+      "sha256": "f69b00fd5aab116b2fb3ed928b5965604dce899ea11f02c68b781666b73a5ced",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/tests/test_momentum.py"
+    },
+    "tests/test_quantile_experiment.py": {
+      "sha256": "9d9efa751bc53335e88775bf3614fe9664db4a0007042aa8390a7370cb4d2261",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/tests/test_quantile_experiment.py"
+    },
+    "tests/test_regimes.py": {
+      "sha256": "1284cc3e5594acd2b669137d9e221cc8b719c35d0592e626103911f2cbda803f",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/tests/test_regimes.py"
+    },
+    "tests/test_smoke.py": {
+      "sha256": "2f4fe27e0519e343f2f41c68d97c9abfc69d773079815a8a42c74b99a1c84902",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/tests/test_smoke.py"
+    },
+    "tests/test_validation_protocol.py": {
+      "sha256": "5590ca7a7a8d60960568cfe26a6d1bdb1263cb0a2c911e3c427c8bc41a66a369",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/tests/test_validation_protocol.py"
+    },
+    "tests/test_window_sensitivity.py": {
+      "sha256": "43d06d1fe6f6b283e2c42b43790325c15244faa854794a3ab0fb37b4404eb912",
+      "role": "implementation",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/tests/test_window_sensitivity.py"
+    },
+    "requirements.txt": {
+      "sha256": "1e7ab8684ce43654479de129eb6f4ca5ff91a6ce24f328bf3240cabb36aebded",
+      "role": "environment_or_universe",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/requirements.txt"
+    },
+    "pytest.ini": {
+      "sha256": "6c6ccf864e8f2d2e0223ee8e39bfde660c12435aa37d81e2b14000a6bee15003",
+      "role": "environment_or_universe",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/pytest.ini"
+    },
+    "config/universe.csv": {
+      "sha256": "5338edef404adedcea8aa8ea6d22a535da762398e5391b3ceee35b7695739fb7",
+      "role": "environment_or_universe",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/config/universe.csv"
+    },
+    "config/universe.json": {
+      "sha256": "6ebb06c4e782ad4385a1eec607f5cb48cfa5e9f6f1f5ecd1b8f676ae46ce5768",
+      "role": "environment_or_universe",
+      "snapshot": "data/protocols/momentum_001_validation_v1/implementation/config/universe.json"
+    },
+    "data/market/2026-11-12/prices.csv": {
+      "sha256": "7f675245b5cc7bcfde41f8bbf6ad6b005c3b96a53656453eee1017533237b8cc",
+      "role": "frozen_price_bytes_only_no_outcome_inspection"
+    },
+    "research/01_momentum.ipynb": {
+      "sha256": "2d0f507c360614fbb8143f2c328be4797fa27de1062ee902de3d1b23b59c815a",
+      "role": "existing_exploration_evidence"
+    },
+    "reports/01_momentum.md": {
+      "sha256": "b78230806d14c2bc4c0f754fecd7674016b520e4a38043cd558d9ee5f4a3bf45",
+      "role": "existing_exploration_evidence"
+    },
+    "reports/data_coverage.md": {
+      "sha256": "cec5d9caba1fcfd0900dc9be7fe2ff26bcc98b6fbbc44b3faa14a1adb1f0d935",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/hac_2010_2016/hac_results.csv": {
+      "sha256": "0b913d5e45b9116e5c94f920bb3f07919a3367c74a4d5bd680447e52f9780911",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/hac_2010_2016/methodology.json": {
+      "sha256": "adac15f637ab58dd875ae13ee24e5942a40f64530d78c19d031f6907083270b5",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/hac_2010_2016/preservation_hashes.json": {
+      "sha256": "d68be17030fc9990f22e40363399c391bfde532b67238733ce53d2e99bf40547",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/hac_2010_2016/p_value_sensitivity.csv": {
+      "sha256": "7ce23b5a2abfe3d7255aec0f75880b79081e26abde9c0402b49aad5c0d18f505",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/hac_2010_2016/section.md": {
+      "sha256": "6289cdc69d8d6e0ab9049d04d39c8957ad64140146508f3b70a2cf85d4d0cf2a",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/hac_2010_2016/statsmodels_verification.csv": {
+      "sha256": "c011f02572a6dc21a1dde7e43ed961e01a9a757e3615cef02fad749a9a7b463a",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/quantiles_2010_2016/audit.csv": {
+      "sha256": "facb32a0ad8999f85cf7b6c414106566018ec76788625aa03a124e82b17b53b5",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/quantiles_2010_2016/daily_quantiles.csv": {
+      "sha256": "30a5159286a7cafe8aac45fb8ef85af892a28dc007bb6cf9c5aad01d5bff5dc7",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/quantiles_2010_2016/daily_returns.csv": {
+      "sha256": "a66d57a7822044c6a829b730a759fe5624da074da0374dd3c5e12451b13172ec",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/quantiles_2010_2016/daily_spread.csv": {
+      "sha256": "b1b4f8e75ff020fd970ca156fed72f30302aac3ceef3a5446cf780aa68b3203a",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/quantiles_2010_2016/group_membership.csv": {
+      "sha256": "f8a2fd7630ba26c26ee084e9194da620092ea1b730e8b292c8204010806023aa",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/quantiles_2010_2016/methodology.json": {
+      "sha256": "c64559e031d82ead012d794ad6cf6da603dc45ee867cc78d750d9b3c70e787c3",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/quantiles_2010_2016/preservation_hashes.json": {
+      "sha256": "de30bcceb7109d2eeaddb7547131d1dea55d659f6ec9647de493f198d4e3fadc",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/quantiles_2010_2016/quantile_summary.csv": {
+      "sha256": "daab4d3667d8374e2ed0295bb9e4fc8d7287184f2d576ce72f690b0aed834822",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/quantiles_2010_2016/section.md": {
+      "sha256": "6c0e3b5b210ae1937ef5f6b8fd854fb6d541d64d21aa051b32c49d4c9b7fff7b",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/quantiles_2010_2016/spread_summary.csv": {
+      "sha256": "f5e9e77741e83545d40f31a3f7e04290fad3780208f1a031df2441a537cfd8d5",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/quantiles_2010_2016/yearly_counts.csv": {
+      "sha256": "84f282fa2f24c7861327c0a9e23f41d28cbfb9d44a2e8402b088d6bafcc082e8",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/quantiles_2010_2016/yearly_returns.csv": {
+      "sha256": "11e05da0ff58d9a3764af8935bf7fc9dfee7da86bc7e6e20a6f8a150be885c2f",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/quantiles_2010_2016/yearly_spreads.csv": {
+      "sha256": "5d7155057d7d8d1fd4c059e9c6fa518c9ad33e3131a1f98ae523c908bb2ca141",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/regime_2010_2016/appendix.md": {
+      "sha256": "c4af9ccc5886da7c854bee1f6d6fe1ce3da6808d0384d1de13fcd0517672caee",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/regime_2010_2016/conditional_rank_ic.csv": {
+      "sha256": "6d608122a8132fda9a66e42d9a01020c1066e5c584527a382ab92649c807d705",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/regime_2010_2016/daily_alignment.csv": {
+      "sha256": "587260f9b2c63b3893b80026afdfa529fd2176182eca3400e3e06b9089bfb5ee",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/regime_2010_2016/methodology.json": {
+      "sha256": "b75b4ab1b2a3feed696c151e0fdc06499d9bcd0c44267bce311a462dd413a2ea",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/regime_2010_2016/notebook_before_regime.ipynb": {
+      "sha256": "7d9b8d99668c458295cb4ba16e7c095de27e8c4493c972eaf19a8985bf61c73f",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/regime_2010_2016/preservation_check.json": {
+      "sha256": "87312788295b8178f39ae81eb66f235b3cfb7b579a8ab8fdfae4415fd1af9d96",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/regime_2010_2016/spy_regimes.csv": {
+      "sha256": "a01278cbe490d4631f658cd3ca8f8e7f9c5e17a03d21c371381b486b8c63cacc",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/regime_2010_2016/yearly_regime_counts.csv": {
+      "sha256": "c4a7e428b70144fe678f9c7a2099edd56d6d2db635b63c5323610d70aa1b28eb",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/window_sensitivity_2010_2016/audit.csv": {
+      "sha256": "49b8da9265aefb8a7fa21e009b6d08d548e6ebe71dd34f18428b56d64e699e1f",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/window_sensitivity_2010_2016/available.csv": {
+      "sha256": "eff0880c6620bb1c1cfa4b1decde6ff26794b4b61455cd648024593fa4ccca02",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/window_sensitivity_2010_2016/common.csv": {
+      "sha256": "50c022422939f5454deb58261377c7e23269fa52a9c23e2589386e293079df05",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/window_sensitivity_2010_2016/common_pairs.csv": {
+      "sha256": "d66f0ee3a539bf3b8ae276550a57518c88177442167b01c68628831b8f829431",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/window_sensitivity_2010_2016/methodology.json": {
+      "sha256": "ab112001ec8b4177fd00b405ba7a12ecde4c8a4a4f88b49e77764529e202e989",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/window_sensitivity_2010_2016/section.md": {
+      "sha256": "cdaaa2ea3bb5c92518410cd5ba759d8a83525936b16f7c022d7d665ede6a29e5",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/window_sensitivity_2010_2016/summary.csv": {
+      "sha256": "781762e42fdb1fc8a3cce1437a0ee993f65471df79fbf46ca9e1b6ba9c8e2b30",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/window_sensitivity_2010_2016/yearly_counts.csv": {
+      "sha256": "d4a80a9c8706b978ddcccc5b278a9db6cd0621aaa3431fa3a562b02e201bd4c2",
+      "role": "existing_exploration_evidence"
+    },
+    "data/research/momentum_001/window_sensitivity_2010_2016/yearly_means.csv": {
+      "sha256": "149843da3203bde2dd046fe5fe1db741d2f7895ac19aba2cd092b97641e14271",
+      "role": "existing_exploration_evidence"
+    }
+  },
+  "limitations": [
+    "post-exploration hypothesis selection",
+    "current-universe survivorship and selection bias",
+    "vendor revisions and lack of point-in-time historical membership",
+    "overlapping outcomes and longer serial dependence",
+    "no tradability or Alpha inference; no portfolio backtest"
+  ],
+  "amendment_policy": "Preserve v1; create explicit new version with reason before evaluation; never auto-reseal mismatches"
+}

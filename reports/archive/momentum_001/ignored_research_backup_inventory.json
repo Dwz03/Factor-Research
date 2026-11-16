@@ -1,0 +1,1413 @@
+{
+  "purpose": "Complete existing Git-ignored research/data backup inventory; not a replacement seal",
+  "date": "2026-11-14",
+  "files": 281,
+  "total_bytes": 179982722,
+  "entries": [
+    {
+      "path": "data/final_test/momentum_001_v1/artifacts.json",
+      "bytes": 1880,
+      "sha256": "454f33f34ea3614b91052d44d49ae1a9809b4d4122f935a81b97f1b4a90816ec"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/daily_ic_audit.csv",
+      "bytes": 116466,
+      "sha256": "462cad36582572cb406beeeb21593ab5c65f743b760e9fbb6d6612fe28caa52c"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/daily_quantiles.csv",
+      "bytes": 309980,
+      "sha256": "2c192586d3647913bfeb6fc5b0c7bfcc682a3d68a6836b0c24538aff66451288"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/daily_spread.csv",
+      "bytes": 50212,
+      "sha256": "086b7668ff348c4ce3df2db6896c740063e6d613b5189d98b1170db3dad9f9e7"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/executed_driver.py",
+      "bytes": 9733,
+      "sha256": "989bbf51c0be199e09f6b387e62562b5231e091c79a9f974f3501be9a5547391"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/preflight/passed.json",
+      "bytes": 39089,
+      "sha256": "269eebb5709fa1fa801ab1a5ac7fa579a25ba8827334234d6859f602f339a03e"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/preflight/tests.log",
+      "bytes": 265,
+      "sha256": "7cbffc643398ec334d7e9b6858abc781d6a8e88de3c3555d06c87aa3990c242b"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/preflight/tests.xml",
+      "bytes": 18391,
+      "sha256": "f0d1999e28808a6aa81932d41d33ef371f5b932364c9f4366fa388297448c62a"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/preservation.json",
+      "bytes": 558,
+      "sha256": "aaa5449e5ec4f534ed35db1b9768450b4dd7a31d3b39ac34b104cd9cf9ce78d5"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/quantile_membership.csv",
+      "bytes": 1790384,
+      "sha256": "c929fa1abcb9fa03a59d57c56efa4242a055849ea394ae784839f40b7f05b97e"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/quantile_summary.csv",
+      "bytes": 604,
+      "sha256": "b201f3415a5831902e4e7a63ca6c2f1ebfda8df6e3cc909b7c497d2d1d6fb180"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/result.json",
+      "bytes": 1229,
+      "sha256": "98af5a1d76700f345cd44128f5a0e2cb12dfb6b591da7bc94c72c96f47747658"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/started.json",
+      "bytes": 497,
+      "sha256": "42e3ac4e60546dc66df225c7d8b066700b3b2caed46a796e168e10f8163f609c"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/valid_pair_mask.csv",
+      "bytes": 2296000,
+      "sha256": "2c24c131af23a253f16f5c70bbd29a4c6c82161328ff0e8c73f7678b7b18694d"
+    },
+    {
+      "path": "data/market/2026-11-12/batches.json",
+      "bytes": 6553,
+      "sha256": "5a967c473a0fd2ed3a7c6f181ae6addccfe68884d4135352930167e55179e041"
+    },
+    {
+      "path": "data/market/2026-11-12/daily_coverage.csv",
+      "bytes": 80519,
+      "sha256": "45cc4f42ab9a2a903bd203cf772e10fb4b3595e2636b4078444d489953e374d8"
+    },
+    {
+      "path": "data/market/2026-11-12/diagnostics/batch_5/manifest.json",
+      "bytes": 1087,
+      "sha256": "945ba70af5ec26d275fa7ad865bfd7bc97a049df7fee72e87cf569f7db8cd555"
+    },
+    {
+      "path": "data/market/2026-11-12/diagnostics/batch_5/processed.csv",
+      "bytes": 1809804,
+      "sha256": "3b65992d15ce8fa8d2fa44e56eeafc486155cc35687838ca98fcc39ac8f37180"
+    },
+    {
+      "path": "data/market/2026-11-12/diagnostics/batch_5/raw.csv",
+      "bytes": 7874023,
+      "sha256": "450c855411e8ff5889e95733d1f7f342d9bf5a203f20d4b6b9d779fd0a7b3846"
+    },
+    {
+      "path": "data/market/2026-11-12/diagnostics/batch_7/manifest.json",
+      "bytes": 1083,
+      "sha256": "0b32fe48e1a36b82a8c8aa0223af584e58b6d382b7b622c8c6745666f5132d24"
+    },
+    {
+      "path": "data/market/2026-11-12/diagnostics/batch_7/processed.csv",
+      "bytes": 1685254,
+      "sha256": "2cae209856c72616b06d6fc0ba45dd962e29001c2abed01f38159ad111dc669e"
+    },
+    {
+      "path": "data/market/2026-11-12/diagnostics/batch_7/raw.csv",
+      "bytes": 7370569,
+      "sha256": "c7bcebe5b2cb5b39fd9cc30a518a4dc2c4d85b174e886c180bc51c69543c8795"
+    },
+    {
+      "path": "data/market/2026-11-12/partial_symbols.csv",
+      "bytes": 15114,
+      "sha256": "fca93aca7a522a63550d4dd77aa2514a719d1fd787e9bc9c56db5f5c0ff5edbf"
+    },
+    {
+      "path": "data/market/2026-11-12/prices.csv",
+      "bytes": 20437080,
+      "sha256": "7f675245b5cc7bcfde41f8bbf6ad6b005c3b96a53656453eee1017533237b8cc"
+    },
+    {
+      "path": "data/market/2026-11-12/sector_coverage.csv",
+      "bytes": 266,
+      "sha256": "fe39f5e72f997cf2d0710da8d48c7473a99108c3141cc9de4103e8d5ee29c006"
+    },
+    {
+      "path": "data/market/2026-11-12/stock_coverage.csv",
+      "bytes": 79080,
+      "sha256": "77a42bd48f6513516fea3122150e36cdcab3f51a54395135b12584a263516040"
+    },
+    {
+      "path": "data/market/2026-11-12/summary.json",
+      "bytes": 341,
+      "sha256": "652287de0e782dbafe82af35636c35080ba8dd6bb3d3cbd7d808a479d1333ce0"
+    },
+    {
+      "path": "data/market/2026-11-12/symbol_notes.csv",
+      "bytes": 556,
+      "sha256": "22ecc0a8636eb481a1a529e2ae1721426c94dfc1fee2134c478068a49328f21d"
+    },
+    {
+      "path": "data/market/2026-11-12/unavailable_symbols.csv",
+      "bytes": 690,
+      "sha256": "850f079506b40eb6ce1e170b1c7bdf765c0e3e74cc668a57eae8acb9cef60c93"
+    },
+    {
+      "path": "data/processed/1a968dc5995dfd221b0fb5efbf20fc329193798578158e3b4c27549f35b6ee84.csv",
+      "bytes": 1802607,
+      "sha256": "9a60f2781546bbfe0d1a5f0bc79d590c2d08af750dd73d98470dee1170e861da"
+    },
+    {
+      "path": "data/processed/1a968dc5995dfd221b0fb5efbf20fc329193798578158e3b4c27549f35b6ee84.csv.json",
+      "bytes": 835,
+      "sha256": "939a46e1bde4a3bff4247b403ab260c0c5908d0db6c2e1625ab887ade0e76eb3"
+    },
+    {
+      "path": "data/processed/2055f8e70428116e4f3785bd316a467896b31e09fe6e035abc48585f784481c5.csv",
+      "bytes": 1671303,
+      "sha256": "1f46847ab3319b92766873a1f5d3ca8053b5d2e55cdbd53af3292608e594fcf3"
+    },
+    {
+      "path": "data/processed/2055f8e70428116e4f3785bd316a467896b31e09fe6e035abc48585f784481c5.csv.json",
+      "bytes": 833,
+      "sha256": "6196ec5d354e5fd86b78c285ebff1373198938596808a7405d4f93018edf8a32"
+    },
+    {
+      "path": "data/processed/24beab5a8fca329481db971e184f29e0a7a7492d5aa201fba08905e6f31f2603.csv",
+      "bytes": 1863823,
+      "sha256": "00375f6778ee0468d674ae3640d045c3a54b36a7280ad8f93a699c96911ae487"
+    },
+    {
+      "path": "data/processed/24beab5a8fca329481db971e184f29e0a7a7492d5aa201fba08905e6f31f2603.csv.json",
+      "bytes": 830,
+      "sha256": "510b831f20d5ec43e871114faecf828475b055efffc41778a350cc169104bc42"
+    },
+    {
+      "path": "data/processed/33ad7cc91d5e5e653aabab74e3d25f7fdc0a7a11a15516a398ff6980bd610748.csv",
+      "bytes": 719621,
+      "sha256": "af5d3d598e784ab2c2b944df5c8966dc605b332f94ee2a8e6901f49ef62ef24a"
+    },
+    {
+      "path": "data/processed/33ad7cc91d5e5e653aabab74e3d25f7fdc0a7a11a15516a398ff6980bd610748.csv.json",
+      "bytes": 623,
+      "sha256": "b507b14112b820143fb96c890cd47449b2995b93f0cdbdc1f8a47eb15c00d8cd"
+    },
+    {
+      "path": "data/processed/5e50c3718279ce827fe0e9e5a829ac41389704e326fcd3ec2e4706bc44c15d0f.csv",
+      "bytes": 1734207,
+      "sha256": "68acb3fd51d24ac56a2208b66accc912f80103683a1e46939c5d702dc8febbed"
+    },
+    {
+      "path": "data/processed/5e50c3718279ce827fe0e9e5a829ac41389704e326fcd3ec2e4706bc44c15d0f.csv.json",
+      "bytes": 840,
+      "sha256": "f1b091cf29021ff871deafdbf1b687eb3f1f3ce9d01a1a481096a8cee4ff726a"
+    },
+    {
+      "path": "data/processed/6826a005d0a733a24def002cea0ec1a59c8fdd9c34f78e7c2d145d200d28b1d0.csv",
+      "bytes": 1744476,
+      "sha256": "9964ef711b48311c3f97a43f2ff123df66f9d431d67a8599cba93eec1a680e13"
+    },
+    {
+      "path": "data/processed/6826a005d0a733a24def002cea0ec1a59c8fdd9c34f78e7c2d145d200d28b1d0.csv.json",
+      "bytes": 833,
+      "sha256": "c24cae3ccf8092728e5b395fb55e42a15047f3f0449c148373e98ec7664b6b0e"
+    },
+    {
+      "path": "data/processed/714f930c67d6fe3174b8d85f8b066f682ad253a662ae7fe07be304979fe28db5.csv",
+      "bytes": 68679,
+      "sha256": "7b82ae29048f823ac9e314cded608a4f41c30c8b6c8294df9df1a46eaf09264a"
+    },
+    {
+      "path": "data/processed/714f930c67d6fe3174b8d85f8b066f682ad253a662ae7fe07be304979fe28db5.csv.json",
+      "bytes": 494,
+      "sha256": "7172c344086f537602b04d2a038ab32a792305b224a6e64b64cbdc2004ddac92"
+    },
+    {
+      "path": "data/processed/8bbdd024483ff27081ef50f72ad6e6c66a6598f996f07bb7bc22472f68c35d08.csv",
+      "bytes": 1715558,
+      "sha256": "518359caf1f3c453995a9d54e851bbcead97ab09b6766e3cf72e86985c55f13e"
+    },
+    {
+      "path": "data/processed/8bbdd024483ff27081ef50f72ad6e6c66a6598f996f07bb7bc22472f68c35d08.csv.json",
+      "bytes": 827,
+      "sha256": "ad41455f579b853ede351804c82a3b0517881f141e628ab55b31dec55e70c6fc"
+    },
+    {
+      "path": "data/processed/8cfc235e8a1aa25b64e3753b75493d0de2fdb639bb69e976c0815a753d567d43.csv",
+      "bytes": 1678429,
+      "sha256": "bd7e876cd6f2b9599b2bc6b9d710b78f05110d90730c55e7b147b18c6b291bfd"
+    },
+    {
+      "path": "data/processed/8cfc235e8a1aa25b64e3753b75493d0de2fdb639bb69e976c0815a753d567d43.csv.json",
+      "bytes": 838,
+      "sha256": "22e80487e9de05745717514413d6a4e4c41f3d1c826c60733a7c26a53e626155"
+    },
+    {
+      "path": "data/processed/9cb56ea25e768762cb4a30392c31dba56c659f6d55d617f4ce0cbd2cce8a04d8.csv",
+      "bytes": 1745107,
+      "sha256": "771f8d38eef927d497cc31cf10340543801339c4526876393e68126ede55acde"
+    },
+    {
+      "path": "data/processed/9cb56ea25e768762cb4a30392c31dba56c659f6d55d617f4ce0cbd2cce8a04d8.csv.json",
+      "bytes": 838,
+      "sha256": "1ddb2b77463d71421d6ce091a4ef1ea1dc5b5cfc02635e969fc5e3ba003780e0"
+    },
+    {
+      "path": "data/processed/ac8fb6701b88a5cc52eb9134807b32ccfdb1d049adafd2d6388ab78832e4ded0.csv",
+      "bytes": 1152218,
+      "sha256": "5d981c8047829383de39117aca8c05d03ebdfff604f127e67f82a7e01456e9ef"
+    },
+    {
+      "path": "data/processed/ac8fb6701b88a5cc52eb9134807b32ccfdb1d049adafd2d6388ab78832e4ded0.csv.json",
+      "bytes": 691,
+      "sha256": "c557fe6a0f95c384525dc67cea8ff01b8c484bd1eb66fe3d8552ac75ee0488c7"
+    },
+    {
+      "path": "data/processed/f298cc4910eb7d646276dfde307e35c073c8d766a1cf6e895bc15bb854b05ac0.csv",
+      "bytes": 1686143,
+      "sha256": "54f48efe677e52a1e42b1b65682ec49e711420d6570468dda7e2a52fe0d0005d"
+    },
+    {
+      "path": "data/processed/f298cc4910eb7d646276dfde307e35c073c8d766a1cf6e895bc15bb854b05ac0.csv.json",
+      "bytes": 837,
+      "sha256": "83f6bd012e9becd5c4e4f08718de1e0ced78550c21bba6d2de81e734ed718f0d"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/config/universe.csv",
+      "bytes": 63797,
+      "sha256": "5338edef404adedcea8aa8ea6d22a535da762398e5391b3ceee35b7695739fb7"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/config/universe.json",
+      "bytes": 468,
+      "sha256": "6ebb06c4e782ad4385a1eec607f5cb48cfa5e9f6f1f5ecd1b8f676ae46ce5768"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/factors/momentum.py",
+      "bytes": 626,
+      "sha256": "c8bcb4deed73c8f78c0d534d0236fae208c1053956962c55cb498d3540969690"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/pytest.ini",
+      "bytes": 42,
+      "sha256": "6c6ccf864e8f2d2e0223ee8e39bfde660c12435aa37d81e2b14000a6bee15003"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/requirements.txt",
+      "bytes": 238,
+      "sha256": "1e7ab8684ce43654479de129eb6f4ca5ff91a6ce24f328bf3240cabb36aebded"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/scripts/build_market_dataset.py",
+      "bytes": 19470,
+      "sha256": "a3b67211fcc3536af6e50415a9e509c63e459954798cfc30360aaffe77fc8daf"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/scripts/execute_momentum_001_validation.py",
+      "bytes": 18758,
+      "sha256": "8c54ef7aad2815671f6a57347951543247488951aad92e89cdbf952491f3130e"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/scripts/momentum_hac_001.py",
+      "bytes": 11680,
+      "sha256": "fabe8f0af082a029797e181cbcdae5c481de543e474cb0f1bc4420a6d212b7e7"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/scripts/momentum_quantiles_001.py",
+      "bytes": 14816,
+      "sha256": "4845e52d7a020edc227bc20baeb70de2b35baf1ec26505c881488034709c11be"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/scripts/momentum_regime_001.py",
+      "bytes": 8925,
+      "sha256": "2b0ba06a39d7b096df185624a4a73a32be728e8f6a446b76a2139235b458ec59"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/scripts/momentum_window_sensitivity_001.py",
+      "bytes": 12553,
+      "sha256": "310d4ef229a99aa94b0ac7555f74cab9b5b7119f7ac580ef2afd17c7c8c3702b"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/scripts/verify_momentum_001_final_test.py",
+      "bytes": 3781,
+      "sha256": "6179cc6eb873d39f0d3e634e70ca0ceee47c25c8d83ed7aa431623b18b494429"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/scripts/verify_momentum_001_validation.py",
+      "bytes": 2016,
+      "sha256": "1bfab6138ad2f8edb18e2d228007aa0da9e06f1ef829382270e647e180669be4"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/src/__init__.py",
+      "bytes": 45,
+      "sha256": "d2757a6944bd41ddaf4d3c8763a910363bb30a04cf4b8fd83d89477599980842"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/src/data/__init__.py",
+      "bytes": 84,
+      "sha256": "898f0cc0bc56337dee18a61911b72ab6367582a6820b168708a725b73ade3d12"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/src/data/cleaner.py",
+      "bytes": 916,
+      "sha256": "70ea6dc326a7f29b9ba26cbe5e5a85ed441c9063402df282ad9dd31d7e8ca740"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/src/data/loader.py",
+      "bytes": 6557,
+      "sha256": "00a671eae50f03db21f68cf023dd39e338c02aacacb7356e96ab0585937cc6bc"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/src/data/validation.py",
+      "bytes": 1641,
+      "sha256": "878ac0e76c2518506bc8df7bcebc6fcd142fb358e8d468660664c3375a3aa190"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/src/evaluation/__init__.py",
+      "bytes": 516,
+      "sha256": "368cef080c7428f0224ffc740affd287d74377acbd26e60a76167f1e82015b6d"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/src/evaluation/core.py",
+      "bytes": 7866,
+      "sha256": "cd9582456b00a8da5e7464245197ef89fe285f1dea35025e9c36cb207e3fab87"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/src/evaluation/inference.py",
+      "bytes": 2672,
+      "sha256": "2d95184d7f8c418954109d625858b9aef718f57f41ed514c2508df2e66224508"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/src/evaluation/regimes.py",
+      "bytes": 1507,
+      "sha256": "e1c5a8fd6e6b8dc4411a856cebc1c37d78fb0fc0618a3fef63693cfcb952b115"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/tests/conftest.py",
+      "bytes": 350,
+      "sha256": "97938ff8b877dad66c18304fd1e32983ddc5126e5128c5b43a90c6d5c55f7c03"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/tests/test_data_cleaner.py",
+      "bytes": 2169,
+      "sha256": "9dbb1a94a9cb2e16921042b234aafd461e93913446ed432722efb19558fd06c2"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/tests/test_data_loader.py",
+      "bytes": 5343,
+      "sha256": "170f5397fc644b5ef419698e67c9dbc80ea067e1cd6746a080a8618da8bf0f71"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/tests/test_evaluation.py",
+      "bytes": 5599,
+      "sha256": "d64e7af30933628a99eb85eafd87b2be0f652af7c4f64910abf9d768a4e80692"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/tests/test_final_test_protocol.py",
+      "bytes": 4712,
+      "sha256": "b404b24a9fe1cf850ac801e130676dda35814032f2c2d753d02c69f0b1099c8e"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/tests/test_inference.py",
+      "bytes": 4024,
+      "sha256": "ee07c92571853053a8b338381957d1c65c2d010b9b1c6f1df0cc9b1db662427e"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/tests/test_market_dataset.py",
+      "bytes": 3068,
+      "sha256": "4f6341b0c0d4caae8a85493b804ba83a501395241fe2c46a7444989585d58803"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/tests/test_momentum.py",
+      "bytes": 938,
+      "sha256": "f69b00fd5aab116b2fb3ed928b5965604dce899ea11f02c68b781666b73a5ced"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/tests/test_quantile_experiment.py",
+      "bytes": 4530,
+      "sha256": "9d9efa751bc53335e88775bf3614fe9664db4a0007042aa8390a7370cb4d2261"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/tests/test_regimes.py",
+      "bytes": 3196,
+      "sha256": "1284cc3e5594acd2b669137d9e221cc8b719c35d0592e626103911f2cbda803f"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/tests/test_smoke.py",
+      "bytes": 1867,
+      "sha256": "2f4fe27e0519e343f2f41c68d97c9abfc69d773079815a8a42c74b99a1c84902"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/tests/test_validation_execution.py",
+      "bytes": 6085,
+      "sha256": "22db40aa6ba7aa6ccad357600599b0aef3e4946c92df3d8a9683b787697fa083"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/tests/test_validation_protocol.py",
+      "bytes": 1311,
+      "sha256": "5590ca7a7a8d60960568cfe26a6d1bdb1263cb0a2c911e3c427c8bc41a66a369"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/implementation/tests/test_window_sensitivity.py",
+      "bytes": 2962,
+      "sha256": "43d06d1fe6f6b283e2c42b43790325c15244faa854794a3ab0fb37b4404eb912"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/preparation.json",
+      "bytes": 1205,
+      "sha256": "b94a56ec010607a26a58aa59b32315664de6e3a181afcb3fe4004bc5458c87f2"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/preparation_tests.log",
+      "bytes": 183,
+      "sha256": "6ee0604a2e247e08642994c0817d6b7ac8d9af1be1d0c4391302dc18244f19b9"
+    },
+    {
+      "path": "data/protocols/momentum_001_final_test_v1/preparation_tests.xml",
+      "bytes": 15285,
+      "sha256": "3d2b3d25c4cd1c43c4c62394a42466b1fb69d4aa7a34439b0da359df1c9fcfb9"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/config/universe.csv",
+      "bytes": 63797,
+      "sha256": "5338edef404adedcea8aa8ea6d22a535da762398e5391b3ceee35b7695739fb7"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/config/universe.json",
+      "bytes": 468,
+      "sha256": "6ebb06c4e782ad4385a1eec607f5cb48cfa5e9f6f1f5ecd1b8f676ae46ce5768"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/factors/momentum.py",
+      "bytes": 626,
+      "sha256": "c8bcb4deed73c8f78c0d534d0236fae208c1053956962c55cb498d3540969690"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/pytest.ini",
+      "bytes": 42,
+      "sha256": "6c6ccf864e8f2d2e0223ee8e39bfde660c12435aa37d81e2b14000a6bee15003"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/requirements.txt",
+      "bytes": 238,
+      "sha256": "1e7ab8684ce43654479de129eb6f4ca5ff91a6ce24f328bf3240cabb36aebded"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/scripts/build_market_dataset.py",
+      "bytes": 19470,
+      "sha256": "a3b67211fcc3536af6e50415a9e509c63e459954798cfc30360aaffe77fc8daf"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/scripts/momentum_hac_001.py",
+      "bytes": 11680,
+      "sha256": "fabe8f0af082a029797e181cbcdae5c481de543e474cb0f1bc4420a6d212b7e7"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/scripts/momentum_quantiles_001.py",
+      "bytes": 14816,
+      "sha256": "4845e52d7a020edc227bc20baeb70de2b35baf1ec26505c881488034709c11be"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/scripts/momentum_regime_001.py",
+      "bytes": 8925,
+      "sha256": "2b0ba06a39d7b096df185624a4a73a32be728e8f6a446b76a2139235b458ec59"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/scripts/momentum_window_sensitivity_001.py",
+      "bytes": 12553,
+      "sha256": "310d4ef229a99aa94b0ac7555f74cab9b5b7119f7ac580ef2afd17c7c8c3702b"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/scripts/verify_momentum_001_validation.py",
+      "bytes": 2016,
+      "sha256": "1bfab6138ad2f8edb18e2d228007aa0da9e06f1ef829382270e647e180669be4"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/src/__init__.py",
+      "bytes": 45,
+      "sha256": "d2757a6944bd41ddaf4d3c8763a910363bb30a04cf4b8fd83d89477599980842"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/src/data/__init__.py",
+      "bytes": 84,
+      "sha256": "898f0cc0bc56337dee18a61911b72ab6367582a6820b168708a725b73ade3d12"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/src/data/cleaner.py",
+      "bytes": 916,
+      "sha256": "70ea6dc326a7f29b9ba26cbe5e5a85ed441c9063402df282ad9dd31d7e8ca740"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/src/data/loader.py",
+      "bytes": 6557,
+      "sha256": "00a671eae50f03db21f68cf023dd39e338c02aacacb7356e96ab0585937cc6bc"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/src/data/validation.py",
+      "bytes": 1641,
+      "sha256": "878ac0e76c2518506bc8df7bcebc6fcd142fb358e8d468660664c3375a3aa190"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/src/evaluation/__init__.py",
+      "bytes": 516,
+      "sha256": "368cef080c7428f0224ffc740affd287d74377acbd26e60a76167f1e82015b6d"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/src/evaluation/core.py",
+      "bytes": 7866,
+      "sha256": "cd9582456b00a8da5e7464245197ef89fe285f1dea35025e9c36cb207e3fab87"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/src/evaluation/inference.py",
+      "bytes": 2672,
+      "sha256": "2d95184d7f8c418954109d625858b9aef718f57f41ed514c2508df2e66224508"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/src/evaluation/regimes.py",
+      "bytes": 1507,
+      "sha256": "e1c5a8fd6e6b8dc4411a856cebc1c37d78fb0fc0618a3fef63693cfcb952b115"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/tests/conftest.py",
+      "bytes": 350,
+      "sha256": "97938ff8b877dad66c18304fd1e32983ddc5126e5128c5b43a90c6d5c55f7c03"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/tests/test_data_cleaner.py",
+      "bytes": 2169,
+      "sha256": "9dbb1a94a9cb2e16921042b234aafd461e93913446ed432722efb19558fd06c2"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/tests/test_data_loader.py",
+      "bytes": 5343,
+      "sha256": "170f5397fc644b5ef419698e67c9dbc80ea067e1cd6746a080a8618da8bf0f71"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/tests/test_evaluation.py",
+      "bytes": 5599,
+      "sha256": "d64e7af30933628a99eb85eafd87b2be0f652af7c4f64910abf9d768a4e80692"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/tests/test_inference.py",
+      "bytes": 4024,
+      "sha256": "ee07c92571853053a8b338381957d1c65c2d010b9b1c6f1df0cc9b1db662427e"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/tests/test_market_dataset.py",
+      "bytes": 3068,
+      "sha256": "4f6341b0c0d4caae8a85493b804ba83a501395241fe2c46a7444989585d58803"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/tests/test_momentum.py",
+      "bytes": 938,
+      "sha256": "f69b00fd5aab116b2fb3ed928b5965604dce899ea11f02c68b781666b73a5ced"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/tests/test_quantile_experiment.py",
+      "bytes": 4530,
+      "sha256": "9d9efa751bc53335e88775bf3614fe9664db4a0007042aa8390a7370cb4d2261"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/tests/test_regimes.py",
+      "bytes": 3196,
+      "sha256": "1284cc3e5594acd2b669137d9e221cc8b719c35d0592e626103911f2cbda803f"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/tests/test_smoke.py",
+      "bytes": 1867,
+      "sha256": "2f4fe27e0519e343f2f41c68d97c9abfc69d773079815a8a42c74b99a1c84902"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/tests/test_validation_protocol.py",
+      "bytes": 1311,
+      "sha256": "5590ca7a7a8d60960568cfe26a6d1bdb1263cb0a2c911e3c427c8bc41a66a369"
+    },
+    {
+      "path": "data/protocols/momentum_001_validation_v1/implementation/tests/test_window_sensitivity.py",
+      "bytes": 2962,
+      "sha256": "43d06d1fe6f6b283e2c42b43790325c15244faa854794a3ab0fb37b4404eb912"
+    },
+    {
+      "path": "data/raw/1a968dc5995dfd221b0fb5efbf20fc329193798578158e3b4c27549f35b6ee84.csv",
+      "bytes": 7867045,
+      "sha256": "aee6836e538d906a2f32afbdbeaa8cb2848deb7b2fb4b258dc958899a7861969"
+    },
+    {
+      "path": "data/raw/2055f8e70428116e4f3785bd316a467896b31e09fe6e035abc48585f784481c5.csv",
+      "bytes": 7285977,
+      "sha256": "5685a3a60db296a1fc732d372b5fdf90343c53482f47c432c131a6794b6d1076"
+    },
+    {
+      "path": "data/raw/24beab5a8fca329481db971e184f29e0a7a7492d5aa201fba08905e6f31f2603.csv",
+      "bytes": 8149531,
+      "sha256": "3a4d2e5c73ae385ac20613d5657f463941a435363dc228ff9a521acdf3dec81e"
+    },
+    {
+      "path": "data/raw/33ad7cc91d5e5e653aabab74e3d25f7fdc0a7a11a15516a398ff6980bd610748.csv",
+      "bytes": 3037833,
+      "sha256": "d2d87c19b3a296f4631185d0d5fc384db8b6bcfed717ce680e0eb5a9783d7bdf"
+    },
+    {
+      "path": "data/raw/5e50c3718279ce827fe0e9e5a829ac41389704e326fcd3ec2e4706bc44c15d0f.csv",
+      "bytes": 7536687,
+      "sha256": "7d03c0909519ca4f937b9b17d0410717b2881496234344a6f3cecea62018d1f3"
+    },
+    {
+      "path": "data/raw/6826a005d0a733a24def002cea0ec1a59c8fdd9c34f78e7c2d145d200d28b1d0.csv",
+      "bytes": 7609562,
+      "sha256": "42f2d22696383b3022d8fa44cb56dbbe85d46365dd3ebab9fea55904f3217f2f"
+    },
+    {
+      "path": "data/raw/714f930c67d6fe3174b8d85f8b066f682ad253a662ae7fe07be304979fe28db5.csv",
+      "bytes": 215961,
+      "sha256": "3a53a21709d4ac4384de385fb949d36e6704a640995ef74f8a7baf87344c3a3e"
+    },
+    {
+      "path": "data/raw/8bbdd024483ff27081ef50f72ad6e6c66a6598f996f07bb7bc22472f68c35d08.csv",
+      "bytes": 7464353,
+      "sha256": "857e2655c74281f2ce05ca1b880288154e9083d3e6cce205952ca6869a3087fd"
+    },
+    {
+      "path": "data/raw/8cfc235e8a1aa25b64e3753b75493d0de2fdb639bb69e976c0815a753d567d43.csv",
+      "bytes": 7297327,
+      "sha256": "36cd7d0aa7f30d10aaa597128e11637bd6911c9538a8243f1ce1b5c72b29852f"
+    },
+    {
+      "path": "data/raw/9cb56ea25e768762cb4a30392c31dba56c659f6d55d617f4ce0cbd2cce8a04d8.csv",
+      "bytes": 7588038,
+      "sha256": "2904af8cd4d3bb45be8ae5abb5ae491d74a3d99c258fcf2167cda677cdb7ff1e"
+    },
+    {
+      "path": "data/raw/ac8fb6701b88a5cc52eb9134807b32ccfdb1d049adafd2d6388ab78832e4ded0.csv",
+      "bytes": 4953122,
+      "sha256": "5005d21be23b0a50cc12670e406191145f54b6be48f2d3d9749616a531e38471"
+    },
+    {
+      "path": "data/raw/f298cc4910eb7d646276dfde307e35c073c8d766a1cf6e895bc15bb854b05ac0.csv",
+      "bytes": 7332320,
+      "sha256": "f364b1bf91c7b6c3a8958fceadd0be0a4bb11d8d44f11315eb72d47b929f84c1"
+    },
+    {
+      "path": "data/research/momentum_001/hac_2010_2016/hac_results.csv",
+      "bytes": 3309,
+      "sha256": "0b913d5e45b9116e5c94f920bb3f07919a3367c74a4d5bd680447e52f9780911"
+    },
+    {
+      "path": "data/research/momentum_001/hac_2010_2016/methodology.json",
+      "bytes": 846,
+      "sha256": "adac15f637ab58dd875ae13ee24e5942a40f64530d78c19d031f6907083270b5"
+    },
+    {
+      "path": "data/research/momentum_001/hac_2010_2016/p_value_sensitivity.csv",
+      "bytes": 427,
+      "sha256": "7ce23b5a2abfe3d7255aec0f75880b79081e26abde9c0402b49aad5c0d18f505"
+    },
+    {
+      "path": "data/research/momentum_001/hac_2010_2016/preservation_hashes.json",
+      "bytes": 2771,
+      "sha256": "d68be17030fc9990f22e40363399c391bfde532b67238733ce53d2e99bf40547"
+    },
+    {
+      "path": "data/research/momentum_001/hac_2010_2016/section.md",
+      "bytes": 7548,
+      "sha256": "6289cdc69d8d6e0ab9049d04d39c8957ad64140146508f3b70a2cf85d4d0cf2a"
+    },
+    {
+      "path": "data/research/momentum_001/hac_2010_2016/statsmodels_verification.csv",
+      "bytes": 10607,
+      "sha256": "c011f02572a6dc21a1dde7e43ed961e01a9a757e3615cef02fad749a9a7b463a"
+    },
+    {
+      "path": "data/research/momentum_001/quantiles_2010_2016/audit.csv",
+      "bytes": 107543,
+      "sha256": "facb32a0ad8999f85cf7b6c414106566018ec76788625aa03a124e82b17b53b5"
+    },
+    {
+      "path": "data/research/momentum_001/quantiles_2010_2016/daily_quantiles.csv",
+      "bytes": 362124,
+      "sha256": "30a5159286a7cafe8aac45fb8ef85af892a28dc007bb6cf9c5aad01d5bff5dc7"
+    },
+    {
+      "path": "data/research/momentum_001/quantiles_2010_2016/daily_returns.csv",
+      "bytes": 207128,
+      "sha256": "a66d57a7822044c6a829b730a759fe5624da074da0374dd3c5e12451b13172ec"
+    },
+    {
+      "path": "data/research/momentum_001/quantiles_2010_2016/daily_spread.csv",
+      "bytes": 58896,
+      "sha256": "b1b4f8e75ff020fd970ca156fed72f30302aac3ceef3a5446cf780aa68b3203a"
+    },
+    {
+      "path": "data/research/momentum_001/quantiles_2010_2016/group_membership.csv",
+      "bytes": 1940975,
+      "sha256": "f8a2fd7630ba26c26ee084e9194da620092ea1b730e8b292c8204010806023aa"
+    },
+    {
+      "path": "data/research/momentum_001/quantiles_2010_2016/methodology.json",
+      "bytes": 992,
+      "sha256": "c64559e031d82ead012d794ad6cf6da603dc45ee867cc78d750d9b3c70e787c3"
+    },
+    {
+      "path": "data/research/momentum_001/quantiles_2010_2016/preservation_hashes.json",
+      "bytes": 4164,
+      "sha256": "de30bcceb7109d2eeaddb7547131d1dea55d659f6ec9647de493f198d4e3fadc"
+    },
+    {
+      "path": "data/research/momentum_001/quantiles_2010_2016/quantile_summary.csv",
+      "bytes": 753,
+      "sha256": "daab4d3667d8374e2ed0295bb9e4fc8d7287184f2d576ce72f690b0aed834822"
+    },
+    {
+      "path": "data/research/momentum_001/quantiles_2010_2016/section.md",
+      "bytes": 8354,
+      "sha256": "6c0e3b5b210ae1937ef5f6b8fd854fb6d541d64d21aa051b32c49d4c9b7fff7b"
+    },
+    {
+      "path": "data/research/momentum_001/quantiles_2010_2016/spread_summary.csv",
+      "bytes": 158,
+      "sha256": "f5e9e77741e83545d40f31a3f7e04290fad3780208f1a031df2441a537cfd8d5"
+    },
+    {
+      "path": "data/research/momentum_001/quantiles_2010_2016/yearly_counts.csv",
+      "bytes": 203,
+      "sha256": "84f282fa2f24c7861327c0a9e23f41d28cbfb9d44a2e8402b088d6bafcc082e8"
+    },
+    {
+      "path": "data/research/momentum_001/quantiles_2010_2016/yearly_returns.csv",
+      "bytes": 808,
+      "sha256": "11e05da0ff58d9a3764af8935bf7fc9dfee7da86bc7e6e20a6f8a150be885c2f"
+    },
+    {
+      "path": "data/research/momentum_001/quantiles_2010_2016/yearly_spreads.csv",
+      "bytes": 576,
+      "sha256": "5d7155057d7d8d1fd4c059e9c6fa518c9ad33e3131a1f98ae523c908bb2ca141"
+    },
+    {
+      "path": "data/research/momentum_001/regime_2010_2016/appendix.md",
+      "bytes": 3388,
+      "sha256": "c4af9ccc5886da7c854bee1f6d6fe1ce3da6808d0384d1de13fcd0517672caee"
+    },
+    {
+      "path": "data/research/momentum_001/regime_2010_2016/conditional_rank_ic.csv",
+      "bytes": 234,
+      "sha256": "6d608122a8132fda9a66e42d9a01020c1066e5c584527a382ab92649c807d705"
+    },
+    {
+      "path": "data/research/momentum_001/regime_2010_2016/daily_alignment.csv",
+      "bytes": 113201,
+      "sha256": "587260f9b2c63b3893b80026afdfa529fd2176182eca3400e3e06b9089bfb5ee"
+    },
+    {
+      "path": "data/research/momentum_001/regime_2010_2016/methodology.json",
+      "bytes": 497,
+      "sha256": "b75b4ab1b2a3feed696c151e0fdc06499d9bcd0c44267bce311a462dd413a2ea"
+    },
+    {
+      "path": "data/research/momentum_001/regime_2010_2016/notebook_before_regime.ipynb",
+      "bytes": 13323,
+      "sha256": "7d9b8d99668c458295cb4ba16e7c095de27e8c4493c972eaf19a8985bf61c73f"
+    },
+    {
+      "path": "data/research/momentum_001/regime_2010_2016/preservation_check.json",
+      "bytes": 322,
+      "sha256": "87312788295b8178f39ae81eb66f235b3cfb7b579a8ab8fdfae4415fd1af9d96"
+    },
+    {
+      "path": "data/research/momentum_001/regime_2010_2016/spy_regimes.csv",
+      "bytes": 117333,
+      "sha256": "a01278cbe490d4631f658cd3ca8f8e7f9c5e17a03d21c371381b486b8c63cacc"
+    },
+    {
+      "path": "data/research/momentum_001/regime_2010_2016/yearly_regime_counts.csv",
+      "bytes": 257,
+      "sha256": "c4a7e428b70144fe678f9c7a2099edd56d6d2db635b63c5323610d70aa1b28eb"
+    },
+    {
+      "path": "data/research/momentum_001/window_sensitivity_2010_2016/audit.csv",
+      "bytes": 139022,
+      "sha256": "49b8da9265aefb8a7fa21e009b6d08d548e6ebe71dd34f18428b56d64e699e1f"
+    },
+    {
+      "path": "data/research/momentum_001/window_sensitivity_2010_2016/available.csv",
+      "bytes": 127599,
+      "sha256": "eff0880c6620bb1c1cfa4b1decde6ff26794b4b61455cd648024593fa4ccca02"
+    },
+    {
+      "path": "data/research/momentum_001/window_sensitivity_2010_2016/common.csv",
+      "bytes": 125666,
+      "sha256": "50c022422939f5454deb58261377c7e23269fa52a9c23e2589386e293079df05"
+    },
+    {
+      "path": "data/research/momentum_001/window_sensitivity_2010_2016/common_pairs.csv",
+      "bytes": 2747491,
+      "sha256": "d66f0ee3a539bf3b8ae276550a57518c88177442167b01c68628831b8f829431"
+    },
+    {
+      "path": "data/research/momentum_001/window_sensitivity_2010_2016/methodology.json",
+      "bytes": 890,
+      "sha256": "ab112001ec8b4177fd00b405ba7a12ecde4c8a4a4f88b49e77764529e202e989"
+    },
+    {
+      "path": "data/research/momentum_001/window_sensitivity_2010_2016/section.md",
+      "bytes": 5970,
+      "sha256": "cdaaa2ea3bb5c92518410cd5ba759d8a83525936b16f7c022d7d665ede6a29e5"
+    },
+    {
+      "path": "data/research/momentum_001/window_sensitivity_2010_2016/summary.csv",
+      "bytes": 652,
+      "sha256": "781762e42fdb1fc8a3cce1437a0ee993f65471df79fbf46ca9e1b6ba9c8e2b30"
+    },
+    {
+      "path": "data/research/momentum_001/window_sensitivity_2010_2016/yearly_counts.csv",
+      "bytes": 395,
+      "sha256": "d4a80a9c8706b978ddcccc5b278a9db6cd0621aaa3431fa3a562b02e201bd4c2"
+    },
+    {
+      "path": "data/research/momentum_001/window_sensitivity_2010_2016/yearly_means.csv",
+      "bytes": 1128,
+      "sha256": "149843da3203bde2dd046fe5fe1db741d2f7895ac19aba2cd092b97641e14271"
+    },
+    {
+      "path": "data/research/momentum_001B/2010_2016/audit.csv",
+      "bytes": 3966754,
+      "sha256": "b968664e015d322657d324bd430c4426b9677bdc72b8186e4f5a458e3007d8af"
+    },
+    {
+      "path": "data/research/momentum_001B/2010_2016/common.csv",
+      "bytes": 426645,
+      "sha256": "29131af05b17f0f0384521777aaba35a8f18b659b37121901fe2bb7009d2c14f"
+    },
+    {
+      "path": "data/research/momentum_001B/2010_2016/common_pair_mask.csv.gz",
+      "bytes": 19843,
+      "sha256": "8ba7a89180a54986bb445a0fd03f03b5c3816a3e1ed46582fe2aab3e960b0855"
+    },
+    {
+      "path": "data/research/momentum_001B/2010_2016/common_retained_mask.csv.gz",
+      "bytes": 19847,
+      "sha256": "68577d08746f028ecb4b45b24425dda1a75a6a4ef295b5591b05e504bb55b3bc"
+    },
+    {
+      "path": "data/research/momentum_001B/2010_2016/individual.csv",
+      "bytes": 442566,
+      "sha256": "536a2a460f323f9e9bfa2c21a3e1df050b949a147ece8a8defdd51769bc73b80"
+    },
+    {
+      "path": "data/research/momentum_001B/2010_2016/price_coverage.csv",
+      "bytes": 11560,
+      "sha256": "519b66a563c96b72b50c742f745dc648e25fc17f12e7b4c20839fe4cce9dbfc3"
+    },
+    {
+      "path": "data/research/momentum_001B/2010_2016/summary.csv",
+      "bytes": 4475,
+      "sha256": "16586083de07c86d8f9de7eaeda10ae6375401f54e3ba86396eb04a51f2b6c9a"
+    },
+    {
+      "path": "data/research/momentum_001B/2010_2019/audit.csv",
+      "bytes": 5683892,
+      "sha256": "f84ff0d869f2419667af2cb1e9581dc6e798de71fd38d38a0cbf283e48191343"
+    },
+    {
+      "path": "data/research/momentum_001B/2010_2019/common.csv",
+      "bytes": 620922,
+      "sha256": "b6e0d06fd1533f469532a723aa2e6dfd781ad66f20c5ea835f08198f69f8207e"
+    },
+    {
+      "path": "data/research/momentum_001B/2010_2019/common_pair_mask.csv.gz",
+      "bytes": 28105,
+      "sha256": "22d76a4091bc3cdb117a6b54d9d859ec1e9b2c0806ef1ef8f298b552e238c4b2"
+    },
+    {
+      "path": "data/research/momentum_001B/2010_2019/common_retained_mask.csv.gz",
+      "bytes": 28109,
+      "sha256": "e284bed5f27b75d00fd8075134f74d314f49787af045dfe1125f25aac142bdac"
+    },
+    {
+      "path": "data/research/momentum_001B/2010_2019/individual.csv",
+      "bytes": 636879,
+      "sha256": "849966d179c7aab02cdc32cc0505cf7daa815421a7b56dc927fed3b57e306bd8"
+    },
+    {
+      "path": "data/research/momentum_001B/2010_2019/price_coverage.csv",
+      "bytes": 11826,
+      "sha256": "7f43b1e2ea43ab8bac07a0f5a7446494f7dbc98b38471d88513b3af21e0ef503"
+    },
+    {
+      "path": "data/research/momentum_001B/2010_2019/summary.csv",
+      "bytes": 4461,
+      "sha256": "25ef8105638e6c7c0f8d7e64b6d7db5a2bd7916ec718453072a984e3d3207047"
+    },
+    {
+      "path": "data/research/momentum_001B/2017_2019/audit.csv",
+      "bytes": 1691194,
+      "sha256": "2458501ef4f90684aa601aa026b34c72ef01b72b9230f29914160d87c607a975"
+    },
+    {
+      "path": "data/research/momentum_001B/2017_2019/common.csv",
+      "bytes": 180093,
+      "sha256": "a95dcc38e2f2ed249b0ebe0a68317088374512add315b4a174ff6183a3ecdfc9"
+    },
+    {
+      "path": "data/research/momentum_001B/2017_2019/common_pair_mask.csv.gz",
+      "bytes": 8749,
+      "sha256": "2c79601dc7301192d5ee58380b94a622c3a6500184f3e47ff96ef91940bfc7ab"
+    },
+    {
+      "path": "data/research/momentum_001B/2017_2019/common_retained_mask.csv.gz",
+      "bytes": 8753,
+      "sha256": "0449ed71b3290006cc89b79ef009767a89e7f7948a4742e16cbff8cca5a813aa"
+    },
+    {
+      "path": "data/research/momentum_001B/2017_2019/individual.csv",
+      "bytes": 188594,
+      "sha256": "7fff02ef4b0e5d31882e5d0b9e6c3f1fff3538eb71218ddf5d5279e22461f0ee"
+    },
+    {
+      "path": "data/research/momentum_001B/2017_2019/price_coverage.csv",
+      "bytes": 11013,
+      "sha256": "63536ba0f28d73b69db18bc4beedaeae5d19aed5f09419e7e9fc1a0a5f94c1a2"
+    },
+    {
+      "path": "data/research/momentum_001B/2017_2019/summary.csv",
+      "bytes": 4392,
+      "sha256": "4622ca921190024eba12f4dc64ab84da57e854130885315aaa7be3a45001947d"
+    },
+    {
+      "path": "data/research/momentum_001B/coverage.csv",
+      "bytes": 250,
+      "sha256": "26039ac3a11df2e177ecea20e0d51bf908b3ab93860c3b47540dcb89c9bfa7d6"
+    },
+    {
+      "path": "data/research/momentum_001B/manifest.json",
+      "bytes": 6901,
+      "sha256": "4d912f18013a07503a94463fc33aaf07a392747ad79fce2f749c8c2e34fac26c"
+    },
+    {
+      "path": "data/research/momentum_001B/summary.csv",
+      "bytes": 13389,
+      "sha256": "56f50302b6106eeecff4c8873d6a9960920b2e247a94229cd1d5c25be726b108"
+    },
+    {
+      "path": "data/research/momentum_001B/tests.xml",
+      "bytes": 16923,
+      "sha256": "a6efca0d7320bdc01aae68883c1627bbeb50bff8883280dd80bf0482e9e08dfa"
+    },
+    {
+      "path": "data/research/momentum_001B/verification.json",
+      "bytes": 1176,
+      "sha256": "e29333f5738db0a2e219e6662a5d4409b591acb17dba0c1d701cf8639aa861e4"
+    },
+    {
+      "path": "data/research/momentum_001B/yearly.csv",
+      "bytes": 56448,
+      "sha256": "9ec8bec7c40ee91474e8582d31ef9e59c5a367d36ec23bf5c772cd04e3560fc4"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/2010_2016/available_ic.csv",
+      "bytes": 442495,
+      "sha256": "ebe52aa4e6167003d2e4c62b1d3da3d71a3ae08a4c84f7419e3b0b3d70f5a77a"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/2010_2016/common_ic.csv",
+      "bytes": 426516,
+      "sha256": "8294ccc31b423e7735d063435ced3c2bfcd90c454324955d3e476e50e3b6c88b"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/2010_2016/intersection.csv.gz",
+      "bytes": 19839,
+      "sha256": "decc366d9d05f8c5c8c722db07a5dbca610ea8f49c93a9643950ea7d9535e823"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/2010_2016/retained.csv.gz",
+      "bytes": 19835,
+      "sha256": "6eb9583bc869bbbad51eb6a946a6d88496a58d2c99bf6f12df00538f52aa9e95"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/2010_2019/available_ic.csv",
+      "bytes": 636774,
+      "sha256": "c3c3e0412b83bdab759c45a64985e53e2fc557ef9ab0f5ab51934d75f5bce491"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/2010_2019/common_ic.csv",
+      "bytes": 620727,
+      "sha256": "2ae46bb065eedd26798f7af0c6dc67ca10933306c12d15f83b77ecd922817f6e"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/2010_2019/intersection.csv.gz",
+      "bytes": 28101,
+      "sha256": "75fce430c10bd7f252a6ba5032d5ec8764bff2f1bdb175de6a516971d05e1cc4"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/2010_2019/retained.csv.gz",
+      "bytes": 28097,
+      "sha256": "5d07c8a33f8e176ce98d31e992d3fc314d4070148318cbd62a5fecc6b49a4841"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/2017_2019/available_ic.csv",
+      "bytes": 188531,
+      "sha256": "599eba2332cba560cededa8d8eeb1bba57c099130f5f2b9865054b151f91aca7"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/2017_2019/common_ic.csv",
+      "bytes": 180013,
+      "sha256": "004aadf00666d879cf10cd703d146d1c22fd3086a901b61361015086bbfe75b9"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/2017_2019/intersection.csv.gz",
+      "bytes": 8745,
+      "sha256": "551bedc9727ad5f59219aab85579c6a3096f5ff09dc1f13ffca6aae5f6a9f328"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/2017_2019/retained.csv.gz",
+      "bytes": 8741,
+      "sha256": "be647d5ae3468007d33175c0adcb6e36175fffb2d1d20b3eafbddfd6d450da94"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/annual.csv",
+      "bytes": 63383,
+      "sha256": "10ec75df0f8461109eb3070d7faef2c814cc25d3dd6bce6d1aa85bb98072bb2f"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/audit.csv",
+      "bytes": 9876462,
+      "sha256": "1fa65a96e77fb3183348e6940e223ce1a3ecbd3ee22aa66961851bb45027c3fa"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/comparison.csv",
+      "bytes": 12399,
+      "sha256": "7a1603f77fc453665663be6e2a23456e52726d8d4c26198f573895c663d2a0ba"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/comparison.png",
+      "bytes": 309165,
+      "sha256": "8599808520e2275d47e3913ed9998db4b6f599ec8457a3187236f7e9adec3dcf"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/heatmaps.png",
+      "bytes": 184818,
+      "sha256": "6acdaa5b726d7ccd7b855307750286a81566da97e4596ad33c279906c9914ae4"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/manifest.json",
+      "bytes": 3994,
+      "sha256": "28fbc59b5fe5789fa4eace69918af9dc00f1efae7a4e814576917b030e220496"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/summary.csv",
+      "bytes": 10283,
+      "sha256": "4defd751dab5161127ce42b20f8f32d181831f0d416a0ed87726bdbfd8155a83"
+    },
+    {
+      "path": "data/research/momentum_001B_tests.xml",
+      "bytes": 16923,
+      "sha256": "a6efca0d7320bdc01aae68883c1627bbeb50bff8883280dd80bf0482e9e08dfa"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2016/annual.csv",
+      "bytes": 13772,
+      "sha256": "8a72718f9da2023c28165c49077b64763c6a986f7c40beced2737fdf99c6fcc7"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2016/audit.csv",
+      "bytes": 86461,
+      "sha256": "7d27f577897fc8d62d778d3e0cd3ee748ef78c65f67d2f82b8d5e36c6060a6ed"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2016/common_pairs.csv.gz",
+      "bytes": 19897,
+      "sha256": "67805fa0405a6ae0ae542c4843e54f98702cf4d37604980c46d455ff56179458"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2016/ic.csv",
+      "bytes": 586720,
+      "sha256": "3970764452f520967764dca5ca8a6f1911544d99a72a8387be89b0b48f03d112"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2016/pair_counts.csv",
+      "bytes": 132625,
+      "sha256": "8bc95fbf8d589c955d1c5fcf97e57d57bc17add3e288c98f9a834a3ee9082cd9"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2016/price_coverage.csv",
+      "bytes": 5391,
+      "sha256": "0db2c5c606904b512db183bb7f5c7e80f5296749ff78580947c594bd94df652e"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2016/regression_annual.csv",
+      "bytes": 2277,
+      "sha256": "6bfb4253bd6af5907362e1322488099e8c01270efcb6955c9c6f68b0b2388003"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2016/regression_summary.csv",
+      "bytes": 437,
+      "sha256": "0a685cb075bf7347a3b13f38aa77412061abe4e685a5b0de2e53a06821b16e13"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2016/regressions.csv",
+      "bytes": 344374,
+      "sha256": "8cb888f882c7a09c16b70bcce54fa3e57e79bca9e8657d213efcd897b9faf039"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2016/summary.csv",
+      "bytes": 2104,
+      "sha256": "af0dbb6f93b22e88654e97fcfbf756162622128e7d6ad669944ffbd9a2ece484"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2016/volatility_characteristics.csv",
+      "bytes": 292802,
+      "sha256": "f50a6b4c50bab016a836cc77c916d831d0c9dccb1d585855bd5a583c32c252f1"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2019/annual.csv",
+      "bytes": 19854,
+      "sha256": "a3b77b97edbb0362d9eea50fb5e1445063387a5b74b9c95927f245e9594dea05"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2019/audit.csv",
+      "bytes": 123407,
+      "sha256": "38f73fc014003265d195c50a9522e18817b59a22b89c72a0485253188cd48833"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2019/common_pairs.csv.gz",
+      "bytes": 28128,
+      "sha256": "69390bbf06f283e1a94607bf7bb992ffb9cc165930ae657e6d6e2b0e60355085"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2019/ic.csv",
+      "bytes": 843966,
+      "sha256": "a48a5d56f87b02ac7f51628c46eb54f4566130d14ccb6c681219fa39f3ac2f7c"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2019/pair_counts.csv",
+      "bytes": 189929,
+      "sha256": "be0996929ef1b6d510625a3740243a4ff336e53497880d8c88e06ca9e78c7ead"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2019/price_coverage.csv",
+      "bytes": 5517,
+      "sha256": "d951a63a271752acb45a3380e3c2d29249947953691188769d0c317d7c014adc"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2019/regression_annual.csv",
+      "bytes": 3249,
+      "sha256": "12a84cdc7effe853a8ce27a6d3005962f87ea477b4183f9afa87e94f9c1bf2c3"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2019/regression_summary.csv",
+      "bytes": 436,
+      "sha256": "2fb830a7ec55e306a50bc2ec2b9a07c1615691ae4bd03f70722e89eaae4b46cf"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2019/regressions.csv",
+      "bytes": 491856,
+      "sha256": "b58c7154dc90fee772bbe772de51b1ea744dc96b041da43ce56c2492aad63b29"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2019/summary.csv",
+      "bytes": 2124,
+      "sha256": "536700afd047ef4103f4561aec7aae99abad9a4c3bd104699d0d866fbfde61d4"
+    },
+    {
+      "path": "data/research/momentum_001C/2010_2019/volatility_characteristics.csv",
+      "bytes": 420207,
+      "sha256": "4be7d6adc2e97407288fcabf599834a44f709c324612cd66e217ca6222a7c4e0"
+    },
+    {
+      "path": "data/research/momentum_001C/2017_2019/annual.csv",
+      "bytes": 6112,
+      "sha256": "e1e0fced08f15c8209f5bc9cb5b88c370d7a5ad95ae68526a8efcf66d7c357c0"
+    },
+    {
+      "path": "data/research/momentum_001C/2017_2019/audit.csv",
+      "bytes": 36984,
+      "sha256": "e271420940b28ac31ae3f9c3d967e34b7af0106e54351f03eb264ecff3f396e4"
+    },
+    {
+      "path": "data/research/momentum_001C/2017_2019/common_pairs.csv.gz",
+      "bytes": 8704,
+      "sha256": "e2745ea54cfb1937bcf47a044b706fca796033582a0512026273dd0e65411e15"
+    },
+    {
+      "path": "data/research/momentum_001C/2017_2019/ic.csv",
+      "bytes": 255836,
+      "sha256": "827bd91fecc41fccb66e2fbd6e9ad7921bc4b9ca3c178fff86a7025fc8bd8a04"
+    },
+    {
+      "path": "data/research/momentum_001C/2017_2019/pair_counts.csv",
+      "bytes": 57397,
+      "sha256": "a01afb8dbe7b4517f5b08f32b3be4c6a3c217def103043047c0c649f518401e9"
+    },
+    {
+      "path": "data/research/momentum_001C/2017_2019/price_coverage.csv",
+      "bytes": 4704,
+      "sha256": "b5d3461d0c36ed0d58b652e3ecaed87c05f70d69963fb8e2560fd68ef7570a51"
+    },
+    {
+      "path": "data/research/momentum_001C/2017_2019/regression_annual.csv",
+      "bytes": 1031,
+      "sha256": "44b7c3f4090c2adc2764b52a7c719ea78371f17c7ea5726fc6eb131ffd752a01"
+    },
+    {
+      "path": "data/research/momentum_001C/2017_2019/regression_summary.csv",
+      "bytes": 436,
+      "sha256": "3a800c5032086b6cbd9a4cebaf60f5f21a0a8e6c9c9c88ef0b8a57349fde3224"
+    },
+    {
+      "path": "data/research/momentum_001C/2017_2019/regressions.csv",
+      "bytes": 147446,
+      "sha256": "694321dce4568ce53530730efc5cf7748f817bd319e79b4df9d61194d5ac95d6"
+    },
+    {
+      "path": "data/research/momentum_001C/2017_2019/summary.csv",
+      "bytes": 2087,
+      "sha256": "9800e7788f0cc79be5ccffa9f50a32a460468a8fcc4272b68c365fdfacc331e5"
+    },
+    {
+      "path": "data/research/momentum_001C/2017_2019/volatility_characteristics.csv",
+      "bytes": 127445,
+      "sha256": "8ed8d221a8f8120c2cd05cbad73734421fdea9c0ea099ff21eb9d01b122bdacb"
+    },
+    {
+      "path": "data/research/momentum_001C/adjusted_ic.png",
+      "bytes": 101936,
+      "sha256": "586773a395d4f1a656a68b5ae3e2e8b658c131eac795d17ecfbb0a8c3969b152"
+    },
+    {
+      "path": "data/research/momentum_001C/annual.csv",
+      "bytes": 42821,
+      "sha256": "d9618d17a21642c47fcf3abb47390c3f14c4a55d6a37e52faca3da3736ff8200"
+    },
+    {
+      "path": "data/research/momentum_001C/annual_coefficients.png",
+      "bytes": 244104,
+      "sha256": "9fe71f22ea1764c5cbffbd3e53dac57ae65cb5111701c391a2f98cb25bb3bae5"
+    },
+    {
+      "path": "data/research/momentum_001C/coverage.csv",
+      "bytes": 436,
+      "sha256": "0efb43acebe63179f79b603fd83ee9ba6b944b9b5839ce54278038723ff64e8f"
+    },
+    {
+      "path": "data/research/momentum_001C/manifest.json",
+      "bytes": 8283,
+      "sha256": "186b81d90afe9ebff07333a17e66dd78d80b6e885382b0955c86a16015e1d303"
+    },
+    {
+      "path": "data/research/momentum_001C/regression_annual.csv",
+      "bytes": 7274,
+      "sha256": "1fe42487b9b801bdfdb29d753c8b0880c6186a710dd747e80785b3bddba31858"
+    },
+    {
+      "path": "data/research/momentum_001C/regression_summary.csv",
+      "bytes": 1334,
+      "sha256": "914ea3943890c69eba128152499e8537cbeda94aef37b4df46db84f87230659d"
+    },
+    {
+      "path": "data/research/momentum_001C/summary.csv",
+      "bytes": 6668,
+      "sha256": "89e5dec7964cdfbbe594621eb5f0a645cf470330db836c5771dd3c7f60de90eb"
+    },
+    {
+      "path": "data/research/momentum_001C/volatility_characteristics.csv",
+      "bytes": 941023,
+      "sha256": "1b451f32e2922bb097585063195408bea3690a472c5242d5cfb40bbf0a9ad165"
+    },
+    {
+      "path": "data/research/momentum_001C/volatility_summary.csv",
+      "bytes": 627,
+      "sha256": "2357a8d2a107dbd45cc1f9225e2b57090c2ff639a09483a006a4e0a2c35ca678"
+    },
+    {
+      "path": "data/research/momentum_incremental_tests.xml",
+      "bytes": 17181,
+      "sha256": "5668881b024305a9e3617eb45596d970048c22ab6dbdfe18faa5303e1f9e5946"
+    },
+    {
+      "path": "data/research/momentum_risk_tests.xml",
+      "bytes": 17814,
+      "sha256": "48765257581b851e0d1bcf45ad2079c443c9ff34fc3950e2efd3f6ce80c48a16"
+    },
+    {
+      "path": "data/universe/2026-11-12/constituents.csv",
+      "bytes": 54098,
+      "sha256": "72c3debd3f96c718de1a1d4959e0fb0c7da108abca0520d5516f15882d78ec6a"
+    },
+    {
+      "path": "data/validation/momentum_001_v1/artifacts.json",
+      "bytes": 1568,
+      "sha256": "1c7884a108c898fdcf7ac94ed831edacecf8d687a50660371275a9728ed6e7ca"
+    },
+    {
+      "path": "data/validation/momentum_001_v1/daily_ic_audit.csv",
+      "bytes": 59359,
+      "sha256": "6db83016a61b0d9069163a4a6ad2523301248b976aa134754145cca629030909"
+    },
+    {
+      "path": "data/validation/momentum_001_v1/daily_quantiles.csv",
+      "bytes": 155142,
+      "sha256": "d3c141f4bec163337602663239443ec8e21850b73c3e6cf8792d9b75f9ac104e"
+    },
+    {
+      "path": "data/validation/momentum_001_v1/daily_spread.csv",
+      "bytes": 25155,
+      "sha256": "9ea9217af95797a328dcf82a3465acb1df95867ce1bc58babf400897e204d46b"
+    },
+    {
+      "path": "data/validation/momentum_001_v1/executed_driver.py",
+      "bytes": 18758,
+      "sha256": "8c54ef7aad2815671f6a57347951543247488951aad92e89cdbf952491f3130e"
+    },
+    {
+      "path": "data/validation/momentum_001_v1/exploration_report_frozen.md",
+      "bytes": 25043,
+      "sha256": "b78230806d14c2bc4c0f754fecd7674016b520e4a38043cd558d9ee5f4a3bf45"
+    },
+    {
+      "path": "data/validation/momentum_001_v1/preflight/passed.json",
+      "bytes": 2040,
+      "sha256": "89543e89f0a5f0fd2c251221938fb97a207e6d7556e162c76a6910b1a633ce1d"
+    },
+    {
+      "path": "data/validation/momentum_001_v1/preflight/tests.log",
+      "bytes": 183,
+      "sha256": "d5d0f3fbe0b613186da8590413ec42c5502866adaf0e10bc73462490d4e7c9cb"
+    },
+    {
+      "path": "data/validation/momentum_001_v1/preflight/tests.xml",
+      "bytes": 13690,
+      "sha256": "c78b104c24561edd951f3761274ce5e2e7b3327b7a351bb9bb8e4d9fe3974cf1"
+    },
+    {
+      "path": "data/validation/momentum_001_v1/quantile_membership.csv",
+      "bytes": 866498,
+      "sha256": "af18b8bab5bc7aa38d07fff961f743dee95792424b1fcd7f578acf6286f091f0"
+    },
+    {
+      "path": "data/validation/momentum_001_v1/quantile_summary.csv",
+      "bytes": 589,
+      "sha256": "0ea088eba5d7fe188eb12d25b34a5ddd2aaaa347f67b4754dc74fcdbf9f5bcbd"
+    },
+    {
+      "path": "data/validation/momentum_001_v1/result.json",
+      "bytes": 1443,
+      "sha256": "1038b09cd725d8e813a0223358c726151ccd7ea22676ffe1d36f52971dd7bbe6"
+    },
+    {
+      "path": "data/validation/momentum_001_v1/section.md",
+      "bytes": 4899,
+      "sha256": "4ac101c05dc9354319ddc6a26375250c87632fa4e1dc459ab288f9b659b1d0c1"
+    },
+    {
+      "path": "data/validation/momentum_001_v1/started.json",
+      "bytes": 633,
+      "sha256": "c577e2d4cfa8feaf7ed9804c960bde730238ea99cbb5c19652b4347a4f071ea3"
+    },
+    {
+      "path": "data/validation/momentum_001_v1/valid_pair_mask.csv",
+      "bytes": 1159208,
+      "sha256": "563f384e982f9ff0242c656c7f4d25e9e921bd8bf3eb1825a54c7ed9b8ae030f"
+    },
+    {
+      "path": "research/data/raw/prices.csv",
+      "bytes": 285904,
+      "sha256": "5196a93a25e70222f19158c68c5dd9e3cf4be62488aa16649ecca6d29868f230"
+    }
+  ]
+}

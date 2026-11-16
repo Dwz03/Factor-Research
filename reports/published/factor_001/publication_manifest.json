@@ -1,0 +1,92 @@
+{
+  "publication_date": "2026-11-16",
+  "title": "Momentum Factor #001 \u2014 Comprehensive Quantitative Research Report",
+  "mode": "Saved-evidence presentation only; no new outcomes",
+  "source_sha256": {
+    "reports/01_momentum.md": "a1ec5586f52c9c41e7f545f2d744b16fbc230a507a8910f77e204884b440131e",
+    "reports/01_momentum_exploration_summary.md": "2cdcf4b0b63eae513dc1fd314ea1f3feada36451b9e1887a7bbff1b890a05a45",
+    "reports/01B_momentum_horizon.md": "a98a19c6087e1368d2a46401614bcd432571c79526574ab54eb4e0390c6e2405",
+    "reports/01B_momentum_incremental.md": "2e3109ef2d1c5dea9d0d378bc771bbcc74f8648cf47a43a4f54dc6be845575b6",
+    "reports/01C_momentum_risk.md": "dc02583d26bbaec87226199dd282724a46704bdfcd091d54a07fd294fa840e46",
+    "reports/01_momentum_validation_protocol.md": "867e3e7e4642906e3c32be98800437ea9c4f5b8b8d1c6ce7eaa1a94a59ff69a4",
+    "reports/01_momentum_final_test_results.md": "c3f408cea02322b1aa585d6440ec23155d4d3446b5af02dfa699b949ddb9e82a",
+    "reports/01_momentum_alpha_assessment_final.md": "019ff253957d2359be350bb6faa9c0e3ee44ebd3d7283fe7c662469ee00a50bc",
+    "reports/FACTOR_LIBRARY.md": "116d4dfd9c20278cf060da9fd71e07eefad9c2d76c8503cf31645abf516fb825",
+    "data/final_test/momentum_001_v1/result.json": "98af5a1d76700f345cd44128f5a0e2cb12dfb6b591da7bc94c72c96f47747658",
+    "data/validation/momentum_001_v1/result.json": "1038b09cd725d8e813a0223358c726151ccd7ea22676ffe1d36f52971dd7bbe6",
+    "config/factor_library/001_momentum.json": "50a6ac2ff7bcf161a7c6a07e456a62ba292b7dd8e1b8162ffbfeaa61a9714e90",
+    "data/research/momentum_001/window_sensitivity_2010_2016/summary.csv": "781762e42fdb1fc8a3cce1437a0ee993f65471df79fbf46ca9e1b6ba9c8e2b30",
+    "data/research/momentum_001B/summary.csv": "56f50302b6106eeecff4c8873d6a9960920b2e247a94229cd1d5c25be726b108",
+    "data/research/momentum_001B_incremental/summary.csv": "4defd751dab5161127ce42b20f8f32d181831f0d416a0ed87726bdbfd8155a83",
+    "data/research/momentum_001C/summary.csv": "89e5dec7964cdfbbe594621eb5f0a645cf470330db836c5771dd3c7f60de90eb",
+    "data/research/momentum_001C/regression_summary.csv": "914ea3943890c69eba128152499e8537cbeda94aef37b4df46db84f87230659d",
+    "data/research/momentum_001C/regression_annual.csv": "1fe42487b9b801bdfdb29d753c8b0880c6186a710dd747e80785b3bddba31858",
+    "data/research/momentum_001C/coverage.csv": "0efb43acebe63179f79b603fd83ee9ba6b944b9b5839ce54278038723ff64e8f",
+    "data/research/momentum_001/quantiles_2010_2016/quantile_summary.csv": "daab4d3667d8374e2ed0295bb9e4fc8d7287184f2d576ce72f690b0aed834822",
+    "data/research/momentum_001/quantiles_2010_2016/spread_summary.csv": "f5e9e77741e83545d40f31a3f7e04290fad3780208f1a031df2441a537cfd8d5",
+    "data/final_test/momentum_001_v1/quantile_summary.csv": "b201f3415a5831902e4e7a63ca6c2f1ebfda8df6e3cc909b7c497d2d1d6fb180",
+    "data/validation/momentum_001_v1/quantile_summary.csv": "0ea088eba5d7fe188eb12d25b34a5ddd2aaaa347f67b4754dc74fcdbf9f5bcbd",
+    "reports/figures/momentum_001_window_sensitivity_2010_2016.png": "66d89396d2fd76a57c35dce81d5ecaaa10e8afb92441d7bace068d17c02d3ab0",
+    "reports/figures/momentum_001_quantiles_2010_2016.png": "4d139c829947daf4faf3c8f582d83a1acbfa88a35db3aff250e7a4683368afc5",
+    "reports/figures/momentum_001B/mean_ic_heatmaps.png": "4aa659b00dc1519e0f909b92ad7736a228ebdd0b6712134a1fe45a65f0e9ec71",
+    "reports/figures/momentum_001B/horizon_profiles.png": "6d729abbd9dd39aa043a0188afa332ce04cbf0773cce6e4c1c3c15714253ea40",
+    "data/research/momentum_001B_incremental/heatmaps.png": "6acdaa5b726d7ccd7b855307750286a81566da97e4596ad33c279906c9914ae4",
+    "data/research/momentum_001B_incremental/comparison.png": "8599808520e2275d47e3913ed9998db4b6f599ec8457a3187236f7e9adec3dcf",
+    "data/research/momentum_001C/adjusted_ic.png": "586773a395d4f1a656a68b5ae3e2e8b658c131eac795d17ecfbb0a8c3969b152",
+    "data/research/momentum_001C/annual_coefficients.png": "9fe71f22ea1764c5cbffbd3e53dac57ae65cb5111701c391a2f98cb25bb3bae5"
+  },
+  "build_script_sha256": "3868124534ea11f698a3e27502e71229aff38c5ceb2fe925a8892768a73b09c8",
+  "integrity_before": {
+    "protocol_id": "momentum_001_final_test_v1.0.0",
+    "final_freeze_file_checks": 136,
+    "validation_lineage": {
+      "files_checked": 122,
+      "validation_decision": "Pass",
+      "report_append": "archive and original prefix verified; parent seal unchanged"
+    },
+    "status": "frozen integrity verified; final test not executed"
+  },
+  "integrity_after": {
+    "protocol_id": "momentum_001_final_test_v1.0.0",
+    "final_freeze_file_checks": 136,
+    "validation_lineage": {
+      "files_checked": 122,
+      "validation_decision": "Pass",
+      "report_append": "archive and original prefix verified; parent seal unchanged"
+    },
+    "status": "frozen integrity verified; final test not executed"
+  },
+  "checks": {
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/157.0.8103.52",
+      "revision": "@0985600c06a688b9c669e74afde7dacd5aaed047",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+      "jsVersion": "15.7.112.23"
+    },
+    "html_checks": {
+      "images": 8,
+      "brokenImages": 0,
+      "math": 1,
+      "externalResources": 0,
+      "missingAnchors": 0
+    },
+    "pdf_checks": {
+      "pages": 25,
+      "page_size": "A4",
+      "text_bounds_errors": [],
+      "missing_font_entries": [],
+      "image_occurrences": 8,
+      "all_page_numbers_present": true,
+      "required_text_present": true
+    }
+  },
+  "output_sha256": {
+    "momentum_001.html": "5873a3ce007118bdeb4358b17e3168066c39bcd79e9ffb24fa3e9ef447156f9d",
+    "momentum_001.pdf": "e458749b46d9588c88d15b21e219268fc2f589feb7c6905f89045c64976c023d"
+  },
+  "notes": [
+    "Legacy verifier status is preparation wording, not current execution status.",
+    "Original execution marker/result record the single completed final test."
+  ]
+}

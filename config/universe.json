@@ -1,0 +1,10 @@
+{
+  "construction_date": "2026-11-12",
+  "source": "https://raw.githubusercontent.com/datasets/s-and-p-500-companies/main/data/constituents.csv",
+  "candidates": 503,
+  "snapshot_sha256": "72c3debd3f96c718de1a1d4959e0fb0c7da108abca0520d5516f15882d78ec6a",
+  "seed": "factor-research-universe-v1",
+  "rule": "sector proportional largest remainder; SHA256(seed|source_ticker) ascending",
+  "survivorship_selection_bias": true,
+  "historical_membership": false
+}

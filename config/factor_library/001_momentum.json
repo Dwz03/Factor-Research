@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "factor_id": "001",
+  "factor_name": "Momentum",
+  "formula": "P[t]/P[t-5] - 1",
+  "original_implementation_default_lookback": 20,
+  "investigated_lookback": 5,
+  "target_horizon": "Future 5D",
+  "target_formula": "P[t+6]/P[t+1] - 1",
+  "entry_lag": 1,
+  "investigated_alpha_orientation": "Negative",
+  "validation": "Pass",
+  "final_held_out_test": "Not Supported",
+  "research_classification": "Watchlist",
+  "classification_label": "Watchlist — Mixed Temporal Evidence",
+  "research_status": "Closed",
+  "closed_on": "2026-11-14",
+  "timezone": "Asia/Shanghai",
+  "decision_rationale": "Exploration and frozen validation were supportive, but the single frozen final test did not meet its predefined evidence standard; non-rejection does not establish a zero effect.",
+  "final_primary": {
+    "decision": "Not Supported",
+    "reason": "Frozen primary lower-tail rule applied",
+    "valid_ic_observations": 1502,
+    "mean_rank_ic": -0.007305374754399302,
+    "hac_se": 0.008403280409157152,
+    "t_stat": -0.8693479687335616,
+    "one_sided_p": 0.19232841654620408,
+    "one_sided_upper_95": 0.00651679150489309,
+    "leading_trim": 0,
+    "trailing_trim": 6,
+    "first_signal": "2020-01-02",
+    "last_signal": "2025-12-22"
+  },
+  "final_secondary": {
+    "valid_dates": 1502,
+    "mean_spread": 0.0010015199745359255,
+    "std_spread": 0.02909319893917595,
+    "positive_fraction": 0.4986684420772304
+  },
+  "original_execution_hashes": {
+    "started_utc": "2026-11-14T13:59:48.974825+00:00",
+    "driver_sha256": "989bbf51c0be199e09f6b387e62562b5231e091c79a9f974f3501be9a5547391",
+    "protocol_sha256": "1dc4ed2c18438f14f2b93e84876054c5246738f64b4843794845f95250b9d756",
+    "seal_sha256": "5269706a0f52c5110eab81e45daaeff55443ce9f4c40f9ea53022215beb1e50d",
+    "preflight_sha256": "269eebb5709fa1fa801ab1a5ac7fa579a25ba8827334234d6859f602f339a03e",
+    "authorization": "Explicit user request: execute frozen final test exactly once"
+  },
+  "universe": {
+    "path": "config/universe.csv",
+    "size": 300,
+    "sha256": "5338edef404adedcea8aa8ea6d22a535da762398e5391b3ceee35b7695739fb7",
+    "replace_or_drop_symbols": false,
+    "historical_membership": false,
+    "survivorship_selection_bias": true
+  },
+  "data": {
+    "path": "data/market/2026-11-12/prices.csv",
+    "sha256": "7f675245b5cc7bcfde41f8bbf6ad6b005c3b96a53656453eee1017533237b8cc",
+    "source": "yahoo",
+    "field": "Close",
+    "auto_adjust": true,
+    "refresh_allowed": false,
+    "integrity_hash_only_during_freeze": true
+  },
+  "final_assessment": "reports/01_momentum_alpha_assessment_final.md",
+  "pre_test_assessment": "reports/01_momentum_alpha_assessment.md",
+  "references": [
+    {
+      "path": "reports/01_momentum.md",
+      "sha256": "a1ec5586f52c9c41e7f545f2d744b16fbc230a507a8910f77e204884b440131e"
+    },
+    {
+      "path": "reports/01_momentum_exploration_summary.md",
+      "sha256": "2cdcf4b0b63eae513dc1fd314ea1f3feada36451b9e1887a7bbff1b890a05a45"
+    },
+    {
+      "path": "reports/01_momentum_validation_protocol.md",
+      "sha256": "867e3e7e4642906e3c32be98800437ea9c4f5b8b8d1c6ce7eaa1a94a59ff69a4"
+    },
+    {
+      "path": "reports/01_momentum_final_test_protocol.md",
+      "sha256": "03a520b24d882b9ab220c93eecbafb230db09c1b773905d82439adba76036a2d"
+    },
+    {
+      "path": "reports/01_momentum_final_test_results.md",
+      "sha256": "c3f408cea02322b1aa585d6440ec23155d4d3446b5af02dfa699b949ddb9e82a"
+    },
+    {
+      "path": "reports/01B_momentum_horizon.md",
+      "sha256": "a98a19c6087e1368d2a46401614bcd432571c79526574ab54eb4e0390c6e2405"
+    },
+    {
+      "path": "reports/01B_momentum_incremental.md",
+      "sha256": "2e3109ef2d1c5dea9d0d378bc771bbcc74f8648cf47a43a4f54dc6be845575b6"
+    },
+    {
+      "path": "reports/01C_momentum_risk.md",
+      "sha256": "dc02583d26bbaec87226199dd282724a46704bdfcd091d54a07fd294fa840e46"
+    },
+    {
+      "path": "reports/01_momentum_alpha_assessment.md",
+      "sha256": "e41b2a770f849e9f5707e44f09c40df5c1f813dee68eeba1d193d6b22fb8a091"
+    },
+    {
+      "path": "reports/data_coverage.md",
+      "sha256": "cec5d9caba1fcfd0900dc9be7fe2ff26bcc98b6fbbc44b3faa14a1adb1f0d935"
+    },
+    {
+      "path": "research/01_momentum.ipynb",
+      "sha256": "2d0f507c360614fbb8143f2c328be4797fa27de1062ee902de3d1b23b59c815a"
+    },
+    {
+      "path": "research/01B_momentum_horizon.ipynb",
+      "sha256": "aebd25830bc17c302044c2715ce99d96989a02f96efc3d09171d1325cd4b87c4"
+    },
+    {
+      "path": "research/01C_momentum_risk.ipynb",
+      "sha256": "67899f7788b438dba3bce68a7cce895d4072881f49bbfd3e40a6a347ad37a04f"
+    },
+    {
+      "path": "config/universe.csv",
+      "sha256": "5338edef404adedcea8aa8ea6d22a535da762398e5391b3ceee35b7695739fb7"
+    },
+    {
+      "path": "config/universe.json",
+      "sha256": "6ebb06c4e782ad4385a1eec607f5cb48cfa5e9f6f1f5ecd1b8f676ae46ce5768"
+    },
+    {
+      "path": "config/momentum_001_validation.json",
+      "sha256": "3dac4c7dc3f9b105da885d065f4f3b66471443ad4e4013b10911886d30ed6797"
+    },
+    {
+      "path": "config/momentum_001_validation.lock.json",
+      "sha256": "49544868e0af294170f0942bccd85302af86e93cc1097343b69940dbc5c88c55"
+    },
+    {
+      "path": "config/momentum_001_final_test.json",
+      "sha256": "1dc4ed2c18438f14f2b93e84876054c5246738f64b4843794845f95250b9d756"
+    },
+    {
+      "path": "config/momentum_001_final_test.lock.json",
+      "sha256": "5269706a0f52c5110eab81e45daaeff55443ce9f4c40f9ea53022215beb1e50d"
+    },
+    {
+      "path": "data/validation/momentum_001_v1/result.json",
+      "sha256": "1038b09cd725d8e813a0223358c726151ccd7ea22676ffe1d36f52971dd7bbe6"
+    },
+    {
+      "path": "data/validation/momentum_001_v1/artifacts.json",
+      "sha256": "1c7884a108c898fdcf7ac94ed831edacecf8d687a50660371275a9728ed6e7ca"
+    },
+    {
+      "path": "data/research/momentum_001B/manifest.json",
+      "sha256": "4d912f18013a07503a94463fc33aaf07a392747ad79fce2f749c8c2e34fac26c"
+    },
+    {
+      "path": "data/research/momentum_001B_incremental/manifest.json",
+      "sha256": "28fbc59b5fe5789fa4eace69918af9dc00f1efae7a4e814576917b030e220496"
+    },
+    {
+      "path": "data/research/momentum_001C/manifest.json",
+      "sha256": "186b81d90afe9ebff07333a17e66dd78d80b6e885382b0955c86a16015e1d303"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/result.json",
+      "sha256": "98af5a1d76700f345cd44128f5a0e2cb12dfb6b591da7bc94c72c96f47747658"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/started.json",
+      "sha256": "42e3ac4e60546dc66df225c7d8b066700b3b2caed46a796e168e10f8163f609c"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/artifacts.json",
+      "sha256": "454f33f34ea3614b91052d44d49ae1a9809b4d4122f935a81b97f1b4a90816ec"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/preflight/passed.json",
+      "sha256": "269eebb5709fa1fa801ab1a5ac7fa579a25ba8827334234d6859f602f339a03e"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/preflight/tests.xml",
+      "sha256": "f0d1999e28808a6aa81932d41d33ef371f5b932364c9f4366fa388297448c62a"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/preflight/tests.log",
+      "sha256": "7cbffc643398ec334d7e9b6858abc781d6a8e88de3c3555d06c87aa3990c242b"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/executed_driver.py",
+      "sha256": "989bbf51c0be199e09f6b387e62562b5231e091c79a9f974f3501be9a5547391"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/daily_ic_audit.csv",
+      "sha256": "462cad36582572cb406beeeb21593ab5c65f743b760e9fbb6d6612fe28caa52c"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/quantile_summary.csv",
+      "sha256": "b201f3415a5831902e4e7a63ca6c2f1ebfda8df6e3cc909b7c497d2d1d6fb180"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/daily_quantiles.csv",
+      "sha256": "2c192586d3647913bfeb6fc5b0c7bfcc682a3d68a6836b0c24538aff66451288"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/quantile_membership.csv",
+      "sha256": "c929fa1abcb9fa03a59d57c56efa4242a055849ea394ae784839f40b7f05b97e"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/daily_spread.csv",
+      "sha256": "086b7668ff348c4ce3df2db6896c740063e6d613b5189d98b1170db3dad9f9e7"
+    },
+    {
+      "path": "data/final_test/momentum_001_v1/valid_pair_mask.csv",
+      "sha256": "2c24c131af23a253f16f5c70bbd29a4c6c82161328ff0e8c73f7678b7b18694d"
+    },
+    {
+      "path": "reports/FACTOR_ASSESSMENT_TEMPLATE.md",
+      "sha256": "4385d7d27b0d070d2730b5e4b4117951278cc03d6b3ce9ecf476390f6310e98e"
+    },
+    {
+      "path": "data/market/2026-11-12/prices.csv",
+      "sha256": "7f675245b5cc7bcfde41f8bbf6ad6b005c3b96a53656453eee1017533237b8cc"
+    }
+  ],
+  "real_data_evaluations_during_archive": 0,
+  "original_test_rerun_allowed": false,
+  "confirmed_independent_alpha": false
+}

@@ -1,0 +1,15 @@
+{
+  "protocol_id": "momentum_001_final_test_v1.0.0",
+  "seal_version": "1.0.0",
+  "frozen_on": "2026-11-13",
+  "timezone": "Asia/Shanghai",
+  "scope": "Local SHA-256 integrity seal; not an external timestamp. Protocol recursively pins implementation, original data and validation history.",
+  "final_test_executed": false,
+  "sha256": {
+    "config/momentum_001_final_test.json": "1dc4ed2c18438f14f2b93e84876054c5246738f64b4843794845f95250b9d756",
+    "reports/01_momentum_final_test_protocol.md": "03a520b24d882b9ab220c93eecbafb230db09c1b773905d82439adba76036a2d",
+    "data/protocols/momentum_001_final_test_v1/preparation.json": "b94a56ec010607a26a58aa59b32315664de6e3a181afcb3fe4004bc5458c87f2",
+    "data/protocols/momentum_001_final_test_v1/preparation_tests.xml": "3d2b3d25c4cd1c43c4c62394a42466b1fb69d4aa7a34439b0da359df1c9fcfb9",
+    "data/protocols/momentum_001_final_test_v1/preparation_tests.log": "6ee0604a2e247e08642994c0817d6b7ac8d9af1be1d0c4391302dc18244f19b9"
+  }
+}

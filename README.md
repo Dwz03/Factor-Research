@@ -5,6 +5,51 @@ mathematical definitions, and interpretation belong to the researcher. This proj
 does not implement a trading strategy. The existing Momentum implementation is
 unchanged: `prices.pct_change(periods=window, fill_method=None)`.
 
+## Start here: closed Momentum #001
+
+- [Factor Library](reports/FACTOR_LIBRARY.md): research catalog and current classifications.
+- **[Momentum #001 final assessment](reports/01_momentum_alpha_assessment_final.md)**: canonical human-readable conclusion.
+- [Published HTML report](reports/published/factor_001/momentum_001.html) and [published PDF report](reports/published/factor_001/momentum_001.pdf): matching archival presentation of the completed study.
+- [Structured library record](config/factor_library/001_momentum.json) and [closure integrity receipt](reports/archive/momentum_001/closure_integrity.json).
+- [Final held-out results](reports/01_momentum_final_test_results.md): single frozen execution, **Not Supported**. The 2017-2019 validation was **Pass**.
+- [Pre-test assessment](reports/01_momentum_alpha_assessment.md): historical evidence, not the current classification.
+- [Repository archival audit](reports/REPOSITORY_ARCHIVAL_AUDIT.md): Git staging recommendations, backup requirements and integrity checks.
+
+Momentum #001 is **Watchlist — Mixed Temporal Evidence**, research status **Closed**. The investigated signal was negative 5D Momentum, based on the unchanged raw formula `P[t]/P[t-5] - 1`, predicting `P[t+6]/P[t+1] - 1`. The final mean Rank IC was -0.007305375 with lower-tail HAC p=0.192328417. The predefined final evidence standard was not met; non-rejection does not prove a zero effect. Completion is not validation success or confirmed tradable Alpha.
+
+## Research workflow
+
+1. Document an economic hypothesis, factor definition, data provenance and timing conventions.
+2. Validate and preserve raw data, processed panels and coverage diagnostics.
+3. Explore on the designated research period; report uncertainty, missingness and research selection.
+4. Freeze a separate validation protocol, inputs, implementations and environment before outcomes.
+5. Execute only an explicitly authorized frozen test, recording preflight evidence and a single-use marker.
+6. Assess evidence, preserve prior decisions, and close the study in the Factor Library.
+
+For #001 these stages are complete. Do not run its research scripts or execution drivers as a setup or reproducibility check, reset markers, refresh its frozen data, or reseal its protocols. The final test must not be repeated. #001-B horizon studies and #001-C risk controls are post-validation exploration, not new independent validations.
+
+## Evidence navigation
+
+| Evidence | Location |
+|---|---|
+| Exploration and original validation | [Original report](reports/01_momentum.md), [exploration close-out](reports/01_momentum_exploration_summary.md) |
+| Cumulative and incremental horizons | [#001-B](reports/01B_momentum_horizon.md), [supplement](reports/01B_momentum_incremental.md) |
+| Sector and historical-volatility controls | [#001-C](reports/01C_momentum_risk.md) |
+| Frozen procedures | [Validation](reports/01_momentum_validation_protocol.md), [final test](reports/01_momentum_final_test_protocol.md) |
+| New-study documentation | [Report template](reports/TEMPLATE.md), [assessment template](reports/FACTOR_ASSESSMENT_TEMPLATE.md) |
+
+`research/` holds notebooks and saved displays; `scripts/` contains explicit study/download/execution drivers; `reports/` holds interpretations, evidence summaries and archival records; `config/` holds universe metadata, specifications, seals and structured library records. `src/` and `factors/` provide reusable implementations; `tests/` contains offline synthetic checks. Root `data/` is the canonical local market and research-artifact location and is Git-ignored. Existing notebook-relative legacy data remains preserved and is not a validated-cache substitute.
+
+A Git checkout alone is not a complete research archive. Back up ignored `data/` (including `market`, `universe`, `raw`, `processed`, `protocols`, `validation`, `final_test` and `research`) plus any legacy `research/data/` separately with original bytes and access restrictions. Some report figures and audit links resolve only with these local artifacts. Never force-add vendor datasets or credentials. Distribution rights for vendor data are not established by this repository; review terms before external sharing.
+
+The original universe uses current constituents and sector labels, not historical point-in-time membership. Survivorship, missing history, retrospective adjustments, overlapping labels, serial dependence, multiple comparisons and unmodeled trading costs limit interpretation. Conditional associations are not proof of causality or tradable Alpha.
+
+### Offline integrity versus execution
+
+`python -B scripts/verify_momentum_001_final_test.py` checks bytes and environment without evaluating outcomes. Its hardcoded preparation-status text says "final test not executed"; the preserved `data/final_test/momentum_001_v1/started.json` and `result.json` are authoritative evidence that execution occurred once. The audit document describes verification of post-execution and closure manifests. The original validation verifier alone flags the authorized report append; lineage verification accounts for the archived prefix without changing the original seal.
+
+Hash verification requires the original ignored artifacts and exact pinned environment. Do not auto-repair mismatches. Preserve line-ending bytes: the local Git configuration currently enables automatic conversion; use the audit's per-command options for staging and configure byte-preserving checkout when restoring an archive.
+
 ## Layout
 
 ```text
